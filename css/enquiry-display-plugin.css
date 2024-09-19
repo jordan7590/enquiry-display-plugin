@@ -1,1 +1,263 @@
-css
+cssbody {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+.container {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #333;
+    padding-bottom: 20px;
+}
+.logo {
+    max-width: 200px;
+    height: auto;
+}
+h1, h2, h3, h4 {
+    color: #0066cc;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+    border-bottom: 1px solid #0066cc;
+    padding-bottom: 10px;
+}
+h3 {
+    font-size: 18px;
+}
+h4 {
+    font-size: 16px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.section {
+    margin-bottom: 30px;
+}
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+li {
+    margin-bottom: 10px;
+}
+.bank-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.bank-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+.bank-card p {
+    margin: 5px 0;
+}
+.highlight {
+    background-color: #ffffcc;
+    padding: 10px;
+    border: 1px solid #e6e600;
+    margin-bottom: 20px;
+}
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0066cc;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+@media print {
+    body {
+        max-width: 100%;
+        background-color: #fff;
+    }
+    .container {
+        box-shadow: none;
+    }
+    .bank-card {
+        page-break-inside: avoid;
+    }
+}
+.itinerary-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+}
+.itinerary-day {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.day-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    margin: -15px -15px 15px -15px;
+}
+.itinerary-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.itinerary-time {
+    width: 80px;
+    font-weight: bold;
+    color: #333;
+}
+.itinerary-description {
+    flex-grow: 1;
+}
+.itinerary-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-left: 15px;
+}
+.header-container {
+    display: flex;
+    align-items: stretch;
+    height: 200px;
+    overflow: hidden;
+}
+.header-left {
+    background-color: #FF9800;
+    width: 30%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.header-right {
+    width: 70%;
+    position: relative;
+}
+.header-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.contact-info {
+    color: #000;
+    font-size: 14px;
+    line-height: 1.5;
+}
+.logo-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+}
+.logo {
+    max-width: 150px;
+    height: auto;
+}
+.tagline {
+    font-size: 12px;
+    color: #333;
+    text-align: right;
+}
+.welcome-section {
+    background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+    padding: 40px 20px;
+    color: #333;
+    font-family: 'Arial', sans-serif;
+}
+.welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: left;
+}
+.welcome-title {
+    font-size: 28px;
+    color: #FF6B6B;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.welcome-message {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+.customer-name {
+    font-weight: bold;
+    color: #4A90E2;
+}
+.highlight {
+    font-style: italic;
+    color: #FF6B6B;
+}
+.enquiry-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+.enquiry-id {
+    font-weight: bold;
+    font-size: 18px;
+}
+.date-details {
+    text-align: center;
+}
+.enquiry-stamp {
+    width: 80px;
+    height: 80px;
+    background-color: #f0f0f0;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #FF6B6B;
+    transform: rotate(-20deg);
+    border: 2px solid #FF6B6B;
+}
