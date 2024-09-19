@@ -117,7 +117,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
 
     </head>
-    <body>
+    <body class="enquiry-body">
         
 
 <div class="header-container">

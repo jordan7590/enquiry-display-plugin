@@ -1,4 +1,4 @@
-body {
+.enquiry-body {
     font-family: Arial, sans-serif !important;
     line-height: 1.6 !important;
     color: #333 !important;
@@ -18,10 +18,7 @@ body {
     border-bottom: 2px solid #333;
     padding-bottom: 20px;
 }
-.logo {
-    max-width: 200px;
-    height: auto;
-}
+
 h1, h2, h3, h4 {
     color: #0066cc;
     margin-top: 30px;
@@ -162,13 +159,24 @@ li {
 .header-container {
     display: flex;
     align-items: stretch;
-    height: 200px;
+    /* height: 300px; */
     overflow: hidden;
     background-color: yellow;
+    flex-direction: column;
+    padding: 20px;
+    background: linear-gradient(to left, #fff 50%, #F28027 50%);
 }
 
-.header-top{
+.header-top {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.logo {
+    max-width: 150px;
+    height: auto;
 }
 
 .header-buttom{
