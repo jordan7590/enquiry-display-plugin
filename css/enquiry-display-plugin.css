@@ -1,4 +1,4 @@
-cssbody {
+body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #333;
@@ -115,6 +115,7 @@ li {
         page-break-inside: avoid;
     }
 }
+
 .itinerary-container {
     background-color: #f0f0f0;
     padding: 20px;
@@ -155,6 +156,8 @@ li {
     border-radius: 5px;
     margin-left: 15px;
 }
+</style>
+<style>
 .header-container {
     display: flex;
     align-items: stretch;
@@ -162,7 +165,7 @@ li {
     overflow: hidden;
 }
 .header-left {
-    background-color: #FF9800;
+    background-color: #FF9800; /* Changed to a warmer orange color */
     width: 30%;
     padding: 20px;
     display: flex;
@@ -200,6 +203,8 @@ li {
     color: #333;
     text-align: right;
 }
+</style>
+<style>
 .welcome-section {
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
     padding: 40px 20px;
@@ -232,6 +237,8 @@ li {
     font-style: italic;
     color: #FF6B6B;
 }
+
+
 .enquiry-details {
     display: flex;
     justify-content: space-between;

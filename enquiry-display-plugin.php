@@ -111,7 +111,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
                <?php wp_head(); ?>
 
-      
+
+
     </head>
     <body>
         
