@@ -205,24 +205,7 @@ li {
     color: #333;
     font-family: 'Arial', sans-serif;
 }
-.welcome-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    text-align: left;
-}
-.welcome-title {
-    font-size: 28px;
-    color: #FF6B6B;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-.welcome-message {
-    font-size: 16px;
-    line-height: 1.6;
-    margin-bottom: 25px;
-}
+
 .customer-name {
     font-weight: bold;
     color: #4A90E2;
