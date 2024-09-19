@@ -21,9 +21,14 @@ add_filter('query_vars', 'ced_query_vars');
 
 // Enqueue the CSS file
 function ced_enqueue_styles() {
-    wp_enqueue_style('ced-styles', plugins_url('enquiry-display-plugin.css', __FILE__), array(), '1.0.0');
+    $css_url = plugins_url('css/enquiry-display-plugin.css', __FILE__);
+    wp_enqueue_style('ced-styles', $css_url, array(), '1.0.0');
+    
+    // Add this line for debugging
+    error_log('Enqueued CSS file: ' . $css_url);
 }
 add_action('wp_enqueue_scripts', 'ced_enqueue_styles');
+
 
 // Display enquiry content
 function ced_display_enquiry() {
@@ -31,7 +36,6 @@ function ced_display_enquiry() {
     if ($enquiry_id) {
         $acf_data = get_fields($enquiry_id);
         if ($acf_data) {
-            ced_enqueue_styles(); // Ensure styles are enqueued
             echo ced_generate_styled_html($acf_data, $enquiry_id);
         } else {
             echo '<p>Enquiry not found.</p>';
@@ -40,7 +44,6 @@ function ced_display_enquiry() {
     }
 }
 add_action('template_redirect', 'ced_display_enquiry');
-
 
 function ced_number_to_words($number) {
     $ones = array(
@@ -109,25 +112,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
-        <?php wp_head(); ?>
-        <style>
-            /* Fallback inline styles */
-            body {
-                font-family: Arial, sans-serif;
-                line-height: 1.6;
-                color: #333;
-                max-width: 1000px;
-                margin: 0 auto;
-                padding: 20px;
-                background-color: #f0f0f0;
-            }
-            .container {
-                background-color: #fff;
-                padding: 20px;
-                box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            }
-            /* Add more critical styles here */
-        </style>
+               <?php wp_head(); ?>
+
 
 
     </head>
@@ -455,10 +441,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="footer">
             <p>Thank you for choosing our services. For any queries, please contact us.</p>
         </div>
-        <?php wp_footer(); ?>
     </body>
     </html>
     <?php
     return ob_get_clean();
-}
 }
