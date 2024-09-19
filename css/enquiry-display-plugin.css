@@ -156,31 +156,34 @@ li {
     border-radius: 5px;
     margin-left: 15px;
 }
-</style>
-<style>
+
+/* header  */
+
 .header-container {
     display: flex;
     align-items: stretch;
     height: 200px;
     overflow: hidden;
+    background-color: yellow;
 }
-.header-left {
-    background-color: #FF9800; /* Changed to a warmer orange color */
-    width: 30%;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+
+.header-top{
+
 }
-.header-right {
-    width: 70%;
-    position: relative;
+
+.header-buttom{
+
 }
 .header-image {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
+
+
+
+
+
 .contact-info {
     color: #000;
     font-size: 14px;
@@ -203,8 +206,7 @@ li {
     color: #333;
     text-align: right;
 }
-</style>
-<style>
+
 .welcome-section {
     background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
     padding: 40px 20px;

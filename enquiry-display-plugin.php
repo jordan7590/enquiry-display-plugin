@@ -119,25 +119,30 @@ function ced_generate_styled_html($data, $enquiry_id) {
     </head>
     <body>
         
+
 <div class="header-container">
-    <div class="header-left">
+    <div class="header-top">
         <div class="contact-info">
             <p>📞 +91 78558 84045</p>
             <p>✉️ santoshim309@gmail.com</p>
         </div>
-    </div>
-    <div class="header-right">
-        <?php
-        // Use a default image from your theme or plugin directory if the placeholder doesn't work
-        $default_image_url = plugins_url('images/default-header.jpg', __FILE__);
-        ?>
-        <img src="<?php echo esc_url('https://img.veenaworld.com/group-tours/world/europe/euep/euep-bnn-1.jpg'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
         <div class="logo-container">
             <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2023/03/Maa-Santoshi-Tours-Travels-768x432.png'); ?>" alt="Maa Santoshi Travels" class="logo">
             <p class="tagline">Travel. Explore. Celebrate Life</p>
         </div>
     </div>
+    <div class="header-buttom">
+        <?php
+        // Use a default image from your theme or plugin directory if the placeholder doesn't work
+        $default_image_url = plugins_url('images/default-header.jpg', __FILE__);
+        ?>
+        <img src="<?php echo esc_url('https://img.veenaworld.com/group-tours/world/europe/euep/euep-bnn-1.jpg'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
+       
+    </div>
 </div>
+
+
+
 
 <div class="enquiry-details">
     <div class="enquiry-id">
