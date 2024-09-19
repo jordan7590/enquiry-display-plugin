@@ -21,11 +21,9 @@ add_filter('query_vars', 'ced_query_vars');
 
 // Enqueue the CSS file
 function ced_enqueue_styles() {
-    wp_enqueue_style('ced-styles', plugins_url('enquiry-display-plugin.css', __FILE__));
+    wp_enqueue_style('ced-styles', plugins_url('enquiry-display-plugin.css', __FILE__), array(), '1.0.0');
 }
 add_action('wp_enqueue_scripts', 'ced_enqueue_styles');
-
-
 
 // Display enquiry content
 function ced_display_enquiry() {
@@ -33,6 +31,7 @@ function ced_display_enquiry() {
     if ($enquiry_id) {
         $acf_data = get_fields($enquiry_id);
         if ($acf_data) {
+            ced_enqueue_styles(); // Ensure styles are enqueued
             echo ced_generate_styled_html($acf_data, $enquiry_id);
         } else {
             echo '<p>Enquiry not found.</p>';
@@ -41,6 +40,7 @@ function ced_display_enquiry() {
     }
 }
 add_action('template_redirect', 'ced_display_enquiry');
+
 
 function ced_number_to_words($number) {
     $ones = array(
