@@ -6,7 +6,6 @@ body {
     margin: auto !important; /* This will center the content horizontally */
     padding: 20px !important;
     background-color: #f0f0f0 !important;
-    text-align: center !important; /* This will center any inline elements (like text) inside the body */
 }
 .container {
     background-color: #fff;
