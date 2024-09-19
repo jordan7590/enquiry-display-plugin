@@ -417,7 +417,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
 <div class="welcome-section">
     <div class="welcome-content">
-        <h2 class="welcome-title">Welcome to Your Dream Journey</h2>
+        <h2 class="welcome-title">aaaaWelcome to Your Dream Journey</h2>
         <p class="welcome-message">
             Dear <span class="customer-name">Sakti Prasad Mohapatr</span>,
         </p>
