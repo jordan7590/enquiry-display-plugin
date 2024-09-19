@@ -109,8 +109,25 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
-               <?php wp_head(); ?>
-
+        <?php wp_head(); ?>
+        <style>
+            /* Fallback inline styles */
+            body {
+                font-family: Arial, sans-serif;
+                line-height: 1.6;
+                color: #333;
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 20px;
+                background-color: #f0f0f0;
+            }
+            .container {
+                background-color: #fff;
+                padding: 20px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            }
+            /* Add more critical styles here */
+        </style>
 
 
     </head>
@@ -438,8 +455,10 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="footer">
             <p>Thank you for choosing our services. For any queries, please contact us.</p>
         </div>
+        <?php wp_footer(); ?>
     </body>
     </html>
     <?php
     return ob_get_clean();
+}
 }
