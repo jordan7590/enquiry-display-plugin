@@ -282,9 +282,16 @@ li {
 }
 
 
+span.customer-name {
+    text-transform: capitalize;
+}
 
 
-
-
+.arrival .departure {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+}
 
 /* comment  */
+

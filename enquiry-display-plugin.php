@@ -208,7 +208,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
             <div class="details-card">
                 <div class="details-header">Journey Details</div>
                 <div class="details-content">
-                    <h3>Arrival</h3>
+                   <div class="arrival">
+                   <h3>Arrival</h3>
                     <div class="detail-item">
                         <span class="detail-label">Date:</span>
                         <span class="detail-value"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></span>
@@ -217,7 +218,9 @@ function ced_generate_styled_html($data, $enquiry_id) {
                         <span class="detail-label">Address:</span>
                         <span class="detail-value"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_address']); ?></span>
                     </div>
-                    <h3>Departure</h3>
+                   </div>
+                   <div class="departure">
+                   <h3>Departure</h3>
                     <div class="detail-item">
                         <span class="detail-label">Date:</span>
                         <span class="detail-value"><?php echo esc_html($data['journey_details']['departure_details']['arrival_date']); ?></span>
@@ -226,6 +229,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
                         <span class="detail-label">Address:</span>
                         <span class="detail-value"><?php echo esc_html($data['journey_details']['departure_details']['departure_address']); ?></span>
                     </div>
+                    </div>
+                    
                 </div>
             </div>
         </div>
