@@ -174,61 +174,63 @@ function ced_generate_styled_html($data, $enquiry_id) {
 </div>
 
 
-            <div class="section">
-                <div class="guest-details">
-                <div class="guest-details-header">Guest Details</div>
-                <table>
-                    <tr>
-                        <th>Name</th>
-                        <td><?php echo esc_html($data['guest_details']['name']); ?></td>
-                    </tr>
-                    <tr>
-                        <th>Contact Number</th>
-                        <td><?php echo esc_html($data['guest_details']['contact_number']); ?></td>
-                    </tr>
-                    <tr>
-                        <th>Email</th>
-                        <td><?php echo esc_html($data['guest_details']['email']); ?></td>
-                    </tr>
-                    <tr>
-                        <th>Number of Passengers</th>
-                        <td><?php echo esc_html($data['guest_details']['no_of_passengers']); ?></td>
-                    </tr>
-                    <tr>
-                        <th>Duration</th>
-                        <td><?php echo esc_html($data['guest_details']['durations']); ?> days</td>
-                    </tr>
-                </table>
-                </div>
-               
-            </div>
-
-            <div class="section">
-                <h2>Journey Details</h2>
-                <h3>Arrival</h3>
-                <table>
-                    <tr>
-                        <th>Date</th>
-                        <td><?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></td>
-                    </tr>
-                    <tr>
-                        <th>Address</th>
-                        <td><?php echo esc_html($data['journey_details']['arrival_details']['arrival_address']); ?></td>
-                    </tr>
-                </table>
-                <h3>Departure</h3>
-                <table>
-                    <tr>
-                        <th>Date</th>
-                        <td><?php echo esc_html($data['journey_details']['departure_details']['arrival_date']); ?></td>
-                    </tr>
-                    <tr>
-                        <th>Address</th>
-                        <td><?php echo esc_html($data['journey_details']['departure_details']['departure_address']); ?></td>
-                    </tr>
-                </table>
-            </div>
-
+         <!-- Guest Details and Journey Details Section -->
+<div class="two-column-section">
+    <div class="column">
+        <div class="guest-details">
+            <div class="guest-details-header">Guest Details</div>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td><?php echo esc_html($data['guest_details']['name']); ?></td>
+                </tr>
+                <tr>
+                    <th>Contact Number</th>
+                    <td><?php echo esc_html($data['guest_details']['contact_number']); ?></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><?php echo esc_html($data['guest_details']['email']); ?></td>
+                </tr>
+                <tr>
+                    <th>Number of Passengers</th>
+                    <td><?php echo esc_html($data['guest_details']['no_of_passengers']); ?></td>
+                </tr>
+                <tr>
+                    <th>Duration</th>
+                    <td><?php echo esc_html($data['guest_details']['durations']); ?> days</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="column">
+        <div class="journey-details">
+            <div class="journey-details-header">Journey Details</div>
+            <h3>Arrival</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <td><?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><?php echo esc_html($data['journey_details']['arrival_details']['arrival_address']); ?></td>
+                </tr>
+            </table>
+            <h3>Departure</h3>
+            <table>
+                <tr>
+                    <th>Date</th>
+                    <td><?php echo esc_html($data['journey_details']['departure_details']['arrival_date']); ?></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td><?php echo esc_html($data['journey_details']['departure_details']['departure_address']); ?></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
           <div class="section">
     <h2>Itinerary</h2>
     <div class="itinerary-container">
