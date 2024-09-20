@@ -455,9 +455,46 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <p><a href="#" class="button">CLICK HERE</a></p>
     </div>
 </div>
-        <div class="footer">
-            <p>Thank you for choosing our services. For any queries, please contact us.</p>
+<div class="footer">
+        <div class="footer-left">
+            In case of any queries<br>
+            reach us at<br>
+            info@patratravels.com
         </div>
+        <div class="footer-center">
+            <div class="footer-icon">
+                <div class="icon">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="5" y="10" width="20" height="10" stroke="#003366" stroke-width="2"/>
+                        <path d="M10 15H20" stroke="#003366" stroke-width="2"/>
+                    </svg>
+                </div>
+                Billing<br>Transport
+            </div>
+            <div class="footer-icon">
+                <div class="icon">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15" cy="10" r="5" stroke="#003366" stroke-width="2"/>
+                        <path d="M7 25C7 20 10 18 15 18C20 18 23 20 23 25" stroke="#003366" stroke-width="2"/>
+                    </svg>
+                </div>
+                24x7<br>Customer Support
+            </div>
+            <div class="footer-icon">
+                <div class="icon">
+                    <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="15" cy="10" r="5" stroke="#003366" stroke-width="2"/>
+                        <path d="M7 25C7 20 10 18 15 18C20 18 23 20 23 25" stroke="#003366" stroke-width="2"/>
+                    </svg>
+                </div>
+                Courteous<br>Chauffur
+            </div>
+        </div>
+        <div class="footer-right">
+            www.patratravels.com<br>
+            +91 8337911111
+        </div>
+    </div>
     </body>
     </html>
     <?php
