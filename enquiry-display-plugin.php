@@ -438,16 +438,6 @@ function ced_generate_styled_html($data, $enquiry_id) {
     </div>
 </div>
 
-<div class="details-card">
-    <div class="details-header">Check the Authenticity of our Company</div>
-    <div class="details-content">
-        <ul>
-            <li>Patra Tours And Travels - Approved by Ministry of Tourism, Govt. of India ( <a href="#">Site Link 1</a>, <a href="#">Site Link 2</a> )</li>
-            <li>Patra Tours And Travels - Approved by Odisha Tourism, Govt. of Odisha ( <a href="#">Site Link</a> )</li>
-            <li>Patra Tours And Travels - Member of "Indian Association of Tour Operators" ( IATO) ( <a href="#">Site Link</a> )</li>
-        </ul>
-    </div>
-</div>
 
 <div class="details-card">
     <div class="details-header">Check Authentic Feedback of our Company</div>
