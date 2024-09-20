@@ -237,12 +237,6 @@ function ced_generate_styled_html($data, $enquiry_id) {
                 <div class="day-header">Day <?php echo $index + 1; ?>: <?php echo esc_html($day['title']); ?></div>
                 <?php
                 $activities = explode("\n", $day['description']);
-                $placeholder_images = [
-                    '/api/placeholder/400/300?text=Beach',
-                    '/api/placeholder/400/300?text=City',
-                    '/api/placeholder/400/300?text=Nature'
-                ];
-                $image = $placeholder_images[array_rand($placeholder_images)];
                 ?>
                 <?php foreach ($activities as $activity): ?>
                     <?php if (trim($activity)): ?>
@@ -252,7 +246,6 @@ function ced_generate_styled_html($data, $enquiry_id) {
                         </div>
                     <?php endif; ?>
                 <?php endforeach; ?>
-                <img src="<?php echo esc_url($image); ?>" alt="Day <?php echo $index + 1; ?> activity" class="itinerary-image">
             </div>
         <?php endforeach; ?>
     </div>
