@@ -300,6 +300,10 @@ span.customer-name {
     padding: 15px;
     font-weight: bold;
     font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 .departure {
@@ -311,6 +315,10 @@ span.customer-name {
     padding: 15px;
     font-weight: bold;
     font-size: 18px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 
@@ -334,11 +342,13 @@ span.customer-name {
   padding: 0px 30px;
 }
 
-
 .icon-plane {
-    color: #3b82f6; /* blue-500 in Tailwind */
+  color: #3b82f6; /* blue-500 in Tailwind */
 }
 
 .icon-home {
-    color: #22c55e; /* green-500 in Tailwind */
+  color: #22c55e; /* green-500 in Tailwind */
+}
+svg {
+    stroke-width: 1;
 }
