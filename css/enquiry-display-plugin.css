@@ -316,19 +316,29 @@ span.customer-name {
 
 .includes-column,
 .excludes-column {
-    flex: 1;
-    padding: 0 15px;
+  flex: 1;
+  padding: 0 15px;
+  border-radius: 10px;
 }
 
 .includes-column-header,
-.excludes-column-header{
-    background-color: #4caf50;
-    color: white;
-    padding: 10px;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 10px;
+.excludes-column-header {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px;
+  border-radius: 10px 10px 0px 0px;
+  margin-bottom: 10px;
 }
 .includes-column-content,
-.excludes-column-content{
-    padding: 15px;
+.excludes-column-content {
+  padding: 0px 30px;
+}
+
+
+.icon-plane {
+    color: #3b82f6; /* blue-500 in Tailwind */
+}
+
+.icon-home {
+    color: #22c55e; /* green-500 in Tailwind */
 }
