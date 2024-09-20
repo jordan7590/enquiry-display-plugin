@@ -57,7 +57,7 @@
 .header-container {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(to left, #fff 50%, #F28027 50%);
+    background: linear-gradient(to left, #fff 50%, #FFD829 50%);
     padding: 20px;
     margin-bottom: 20px;
 }
