@@ -136,7 +136,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="enquiry-details">
     <div class="enquiry-id">
         Enquiry ID<br>
-        MST <?php echo esc_html($data->id); ?>
+        MST <?php echo esc_html($data['id']); ?>
     </div>
     <div class="date-details">
         <div>Pickup Date : <?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></div>
