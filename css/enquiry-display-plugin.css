@@ -224,3 +224,47 @@ li {
     background-color: #45a049;
 }
 
+.enquiry-card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 800px;
+    margin: 0 auto;
+}
+.enquiry-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #e0e0e0;
+}
+.enquiry-id {
+    font-weight: 600;
+    color: #555;
+}
+.date-details {
+    text-align: center;
+    font-size: 0.9em;
+    color: #666;
+}
+.enquiry-stamp {
+    color: #ff6600;
+    border: 2px solid #ff6600;
+    border-radius: 50%;
+    padding: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+.enquiry-content {
+    padding: 30px;
+}
+.customer-name {
+    font-weight: 600;
+    color: #ff6600;
+}
+.orange-text {
+    color: #ff6600;
+}
