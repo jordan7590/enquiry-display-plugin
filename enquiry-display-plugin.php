@@ -459,7 +459,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="footer-left">
             In case of any queries<br>
             reach us at<br>
-            info@patratravels.com
+            santoshim309@gmail.com
         </div>
         <div class="footer-center">
             <div class="footer-icon">
@@ -491,8 +491,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
             </div>
         </div>
         <div class="footer-right">
-            www.patratravels.com<br>
-            +91 8337911111
+            www.maasantoshitravels.com<br>
+            +91 78558 84045
         </div>
     </div>
     </body>
