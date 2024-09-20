@@ -178,7 +178,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
 <!-- Guest Details and Journey Details Section -->
 <div class="two-column-section">
     <div class="column">
-        <div class="details-card guest-details">
+        <div class="details-card">
             <div class="details-header">Guest Details</div>
             <div class="details-content">
                 <div class="detail-item">
