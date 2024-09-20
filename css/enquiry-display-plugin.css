@@ -320,4 +320,16 @@ span.customer-name {
     padding: 0 15px;
 }
 
+.includes-column-header,
+.excludes-column-header{
+    background-color: #4caf50;
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+    margin-bottom: 10px;
+}
+.includes-column-content,
+.excludes-column-content{
+    padding: 15px;
+}
 /* comment  */

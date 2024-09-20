@@ -338,8 +338,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
     <div class="details-header">INCLUSION AND EXCLUSION</div>
     <div class="details-content">
         <div class="includes-column">
-            <h3>What your package includes</h3>
-            <ul>
+            <h3 class="includes-column-header">What your package includes</h3>
+            <ul class="includes-column-content">
                 <li>All Transport related charges (Fuel, Toll Charges, State Taxes & Parking Charges)</li>
                 <li>Driver Allowances</li>
                 <li>Cab Will be with you from your arrival till departure</li>
@@ -348,8 +348,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
             </ul>
         </div>
         <div class="excludes-column">
-            <h3>What Your Package Doesn't Includes</h3>
-            <ul>
+            <h3 class="excludes-column-header">What Your Package Doesn't Includes</h3>
+            <ul class="excludes-column-content">
                 <li>Hotel Booking</li>
                 <li>Any Airfare / Train Fare</li>
                 <li>Boating Charges</li>
