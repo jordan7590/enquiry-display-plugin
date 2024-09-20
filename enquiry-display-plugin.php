@@ -375,21 +375,28 @@ function ced_generate_styled_html($data, $enquiry_id) {
     </div>
 </div>
 
-    <div class="details-card">
-        <div class="details-header">Payment Options</div>
-        <div class="details-content">
-            <div class="highlight">
-                <strong>NOTE:</strong> After successful payment, share the UTR Number / Screenshot via Whatsapp on
-                78558 84045 or mail us on santoshim309@gmail.com with your Enquiry ID / Confirmed ID.
-            </div>
-            
-            <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maa-santohsi-travels-upi.jpeg'); ?>" alt="Maa Santoshi Travels UPI">
-            
-           
-        </div>
-    </div>
+    
 
-       <div class="details-card">
+
+    <div class="two-column-section">
+        <div class="column">
+            <div class="details-card">
+            <div class="details-header">Payment Options</div>
+            <div class="details-content">
+                <div class="highlight">
+                    <strong>NOTE:</strong> After successful payment, share the UTR Number / Screenshot via Whatsapp on
+                    78558 84045 or mail us on santoshim309@gmail.com with your Enquiry ID / Confirmed ID.
+                </div>
+                
+                <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maa-santohsi-travels-upi.jpeg'); ?>" alt="Maa Santoshi Travels UPI">
+                
+            
+            </div>
+            </div>
+        </div>
+        <div class="column">
+   
+        <div class="details-card">
     <div class="details-header">Cancellation Policy</div>
     <div class="details-content">
         <ul>
@@ -399,6 +406,10 @@ function ced_generate_styled_html($data, $enquiry_id) {
         </ul>
     </div>
 </div>
+        </div>
+    </div>
+
+
 
 <div class="details-card">
     <div class="details-header">Terms and Conditions</div>
