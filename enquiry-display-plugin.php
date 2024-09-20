@@ -119,10 +119,11 @@ function ced_generate_styled_html($data, $enquiry_id) {
             
             <div class="header-top">
             <div class="contact-info">
-                 <p style="    font-size: 25px;
-    font-weight: 900;
-    text-transform: uppercase;"> Maa Santoshi Tours & Travels </p>
-                <p style="    font-size: 10px;"> Recognized By Ministry Of Tourism, Govt. of India & Department of Tourism, Govt. of Odisha </p>
+                 <p style="  font-size: 26px;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: sans-serif;"> Maa Santoshi Tours & Travels </p>
+                <p style="    font-size: 11px;"> Recognized By Ministry Of Tourism, Govt. of India & Department of Tourism, Govt. of Odisha </p>
             </div>
            <div class="contact-info">
                  <p style="   font-size: 25px;
