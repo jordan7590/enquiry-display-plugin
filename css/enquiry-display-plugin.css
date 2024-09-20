@@ -134,7 +134,7 @@
 .detail-item {
   display: flex;
   /* margin: 5px; */
-  padding: 10px 0px;
+  padding: 10px;
   align-items: flex-start;
   border-bottom: solid 1px #80808038;
 }
@@ -289,23 +289,23 @@ span.customer-name {
 
 .arrival {
   background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 5px;
-  margin: 5px 0px;
 
   h3 {
-    font-size: 17px;
-    font-weight: 800;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
   }
 }
 .departure {
   background-color: #f9f9f9;
-  padding: 15px;
-  border-radius: 5px;
-  margin: 5px 0px;
   h3 {
-    font-size: 17px;
-    font-weight: 800;
+    background-color: #4caf50;
+    color: white;
+    padding: 15px;
+    font-weight: bold;
+    font-size: 18px;
   }
 }
 /* comment  */
