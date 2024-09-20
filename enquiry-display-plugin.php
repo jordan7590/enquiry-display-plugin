@@ -24,11 +24,11 @@ function ced_enqueue_styles() {
     $css_url = plugins_url('css/enquiry-display-plugin.css', __FILE__);
     wp_enqueue_style('ced-styles', $css_url, array(), '1.0.0');
     
-    // Add this line for debugging
-    error_log('Enqueued CSS file: ' . $css_url);
+    // Enqueue print-specific CSS
+    $print_css_url = plugins_url('css/enquiry-display-print.css', __FILE__);
+    wp_enqueue_style('ced-print-styles', $print_css_url, array(), '1.0.0', 'print');
 }
 add_action('wp_enqueue_scripts', 'ced_enqueue_styles');
-
 
 // Display enquiry content
 function ced_display_enquiry() {
@@ -452,72 +452,107 @@ function ced_generate_styled_html($data, $enquiry_id) {
         </div>
 
         <script>
-        function generatePDF() {
-            console.log('Generate PDF function called');
+function generatePDF() {
+    console.log('Generate PDF function called');
+    
+    const content = document.getElementById('enquiry-content');
+    if (!content) {
+        console.error('Element with id "enquiry-content" not found');
+        alert('PDF generation failed: Content element not found');
+        return;
+    }
+
+    if (typeof window.jspdf === 'undefined' || typeof html2canvas === 'undefined') {
+        console.error('Required libraries not loaded');
+        alert('PDF generation failed: Required libraries not loaded');
+        return;
+    }
+
+    const { jsPDF } = window.jspdf;
+
+    // Create a new jsPDF instance
+    const pdf = new jsPDF('p', 'pt', 'a4');
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    const margin = 40; // Margin around the page
+
+    // Function to add a new page
+    const addPage = () => {
+        pdf.addPage();
+        return pdf.internal.getCurrentPageInfo().pageNumber;
+    };
+
+    // Recursively add content to PDF
+    const addContentToPDF = (element, currentPage = 1) => {
+        html2canvas(element, {
+            scale: 2,
+            useCORS: true,
+            logging: true
+        }).then(canvas => {
+            const imgData = canvas.toDataURL('image/png');
+            const imgWidth = pageWidth - 2 * margin;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
             
-            const content = document.getElementById('enquiry-content');
-            if (!content) {
-                console.error('Element with id "enquiry-content" not found');
-                alert('PDF generation failed: Content element not found');
-                return;
-            }
+            let heightLeft = imgHeight;
+            let position = 0;
 
-            if (typeof window.jspdf === 'undefined' || typeof html2canvas === 'undefined') {
-                console.error('Required libraries not loaded');
-                alert('PDF generation failed: Required libraries not loaded');
-                return;
-            }
+            pdf.setPage(currentPage);
 
-            const { jsPDF } = window.jspdf;
-
-            // Add a small delay to ensure content is fully rendered
-            setTimeout(() => {
-                html2canvas(content, {
-                    logging: true, // Enable logging for html2canvas
-                    useCORS: true, // Try to load images from other domains
-                    scale: 2 // Improve the quality of the captured image
-                }).then(canvas => {
-                    console.log('HTML to canvas conversion successful');
-                    const imgData = canvas.toDataURL('image/png');
-                    const pdf = new jsPDF('p', 'mm', 'a4');
-                    const pdfWidth = pdf.internal.pageSize.getWidth();
-                    const pdfHeight = pdf.internal.pageSize.getHeight();
-                    const imgWidth = canvas.width;
-                    const imgHeight = canvas.height;
-                    const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-                    const imgX = (pdfWidth - imgWidth * ratio) / 2;
-                    const imgY = 30;
-
-                    pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
-                    pdf.save('enquiry_<?php echo esc_js($enquiry_id); ?>.pdf');
-                    console.log('PDF generated and save initiated');
-                }).catch(error => {
-                    console.error('Error in html2canvas:', error);
-                    alert('PDF generation failed: ' + error.message);
-                });
-            }, 500); // 500ms delay
-        }
-
-        window.addEventListener('load', function() {
-            if (typeof window.jspdf === 'undefined') {
-                console.error('jsPDF library not loaded');
-            } else {
-                console.log('jsPDF library loaded successfully');
-            }
+            // Add image to current page
+            pdf.addImage(imgData, 'PNG', margin, position + margin, imgWidth, imgHeight);
+            heightLeft -= (pageHeight - 2 * margin);
             
-            if (typeof html2canvas === 'undefined') {
-                console.error('html2canvas library not loaded');
-            } else {
-                console.log('html2canvas library loaded successfully');
+            // Add new pages if content overflows
+            while (heightLeft > 0) {
+                position = heightLeft - imgHeight;
+                currentPage = addPage();
+                pdf.addImage(imgData, 'PNG', margin, position + margin, imgWidth, imgHeight);
+                heightLeft -= (pageHeight - 2 * margin);
             }
 
-            if (!document.getElementById('enquiry-content')) {
-                console.error('Element with id "enquiry-content" not found');
+            // Process next sibling element if exists
+            if (element.nextElementSibling) {
+                addContentToPDF(element.nextElementSibling, currentPage);
             } else {
-                console.log('Enquiry content element found');
+                // Save PDF when all elements are processed
+                pdf.save('enquiry_<?php echo esc_js($enquiry_id); ?>.pdf');
+                console.log('Multi-page PDF generated and saved');
             }
+        }).catch(error => {
+            console.error('Error in html2canvas:', error);
+            alert('PDF generation failed: ' + error.message);
         });
-        </script>
+    };
+
+    // Start processing with the first child of the content container
+    if (content.firstElementChild) {
+        addContentToPDF(content.firstElementChild);
+    } else {
+        console.error('No content found in the enquiry-content container');
+        alert('PDF generation failed: No content found');
+    }
+}
+
+window.addEventListener('load', function() {
+    if (typeof window.jspdf === 'undefined') {
+        console.error('jsPDF library not loaded');
+    } else {
+        console.log('jsPDF library loaded successfully');
+    }
+    
+    if (typeof html2canvas === 'undefined') {
+        console.error('html2canvas library not loaded');
+    } else {
+        console.log('html2canvas library loaded successfully');
+    }
+
+    if (!document.getElementById('enquiry-content')) {
+        console.error('Element with id "enquiry-content" not found');
+    } else {
+        console.log('Enquiry content element found');
+    }
+});
+</script>
     </body>
     </html>
     <?php
