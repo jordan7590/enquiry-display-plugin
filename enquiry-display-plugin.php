@@ -386,51 +386,60 @@ function ced_generate_styled_html($data, $enquiry_id) {
         </div>
     </div>
 
-            <div class="section">
-                <h2>Cancellation Policy</h2>
-                <ul>
-                    <li>Within 0 - 24 hours: <strong>15%</strong> Cancellation charges on the total billing amount</li>
-                    <li>Within 24 - 48 hours: <strong>10%</strong> Cancellation charges on the total billing amount</li>
-                    <li>Above 48 hours: <strong>5%</strong> Cancellation charges on the total billing amount</li>
-                </ul>
-            </div>
+    <div class="details-card">
+    <div class="details-header">Cancellation Policy</div>
+    <div class="details-content">
+        <ul>
+            <li>Within 0 - 24 hours: <strong>15%</strong> Cancellation charges on the total billing amount</li>
+            <li>Within 24 - 48 hours: <strong>10%</strong> Cancellation charges on the total billing amount</li>
+            <li>Above 48 hours: <strong>5%</strong> Cancellation charges on the total billing amount</li>
+        </ul>
+    </div>
+</div>
 
-            <div class="section">
-                <h2>Terms and Conditions</h2>
-                <ul>
-                    <li>Driver Details And Cab Regn Number Details will be provided before 03 Hours of Arrival Time</li>
-                    <li>Up-gradation of Cab is Possible on Extra Charges</li>
-                    <li>Standing AC {Per 30 Min @ Rs. 400 (Sedan & SUV Cabs), Rs.600 (Tempo Traveller), Rs.1000(Coach)}</li>
-                    <li>Per Day Maximum Allowed Time for Transportation is 12 Hrs</li>
-                    <li>Maximum Driver Duty Time is up to 10 Pm</li>
-                    <li>While driving on Ghat roads, Air-Conditioning shall remain switched off</li>
-                    <li>All disputes are subject to Bhubaneswar legal jurisdiction only</li>
-                </ul>
-            </div>
+<div class="details-card">
+    <div class="details-header">Terms and Conditions</div>
+    <div class="details-content">
+        <ul>
+            <li>Driver Details And Cab Regn Number Details will be provided before 03 Hours of Arrival Time</li>
+            <li>Up-gradation of Cab is Possible on Extra Charges</li>
+            <li>Standing AC {Per 30 Min @ Rs. 400 (Sedan & SUV Cabs), Rs.600 (Tempo Traveller), Rs.1000(Coach)}</li>
+            <li>Per Day Maximum Allowed Time for Transportation is 12 Hrs</li>
+            <li>Maximum Driver Duty Time is up to 10 Pm</li>
+            <li>While driving on Ghat roads, Air-Conditioning shall remain switched off</li>
+            <li>All disputes are subject to Bhubaneswar legal jurisdiction only</li>
+        </ul>
+    </div>
+</div>
 
-            <div class="section">
-                <h2>Disclaimers</h2>
-                <ul>
-                    <li>In case of any sudden breakdown or unforeseen incident, the company will not be liable for any compensation or damages. Not with standing the above, the service provider/company will initiate all possible prompt and appropriate action to recover the situation there upon.</li>
-                    <li>The Company will not be responsible for any stolen luggage, compensation or damages if occurred during your journey. Nonetheless, the company will help you in every possible manner to recover from the situation.</li>
-                    <li>The company will not be liable for any refund or compensation due to restriction of the cab / Bus movement or denial of entry to any area by the city administration or traffic police.</li>
-                </ul>
-            </div>
+<div class="details-card">
+    <div class="details-header">Disclaimers</div>
+    <div class="details-content">
+        <ul>
+            <li>In case of any sudden breakdown or unforeseen incident, the company will not be liable for any compensation or damages. Not with standing the above, the service provider/company will initiate all possible prompt and appropriate action to recover the situation there upon.</li>
+            <li>The Company will not be responsible for any stolen luggage, compensation or damages if occurred during your journey. Nonetheless, the company will help you in every possible manner to recover from the situation.</li>
+            <li>The company will not be liable for any refund or compensation due to restriction of the cab / Bus movement or denial of entry to any area by the city administration or traffic police.</li>
+        </ul>
+    </div>
+</div>
 
-        <div class="section">
-            <h2>Check the Authenticity of our Company</h2>
-            <ul>
-                <li>Patra Tours And Travels - Approved by Ministry of Tourism, Govt. of India ( Site Link 1, Site Link 2 )</li>
-                <li>Patra Tours And Travels - Approved by Odisha Tourism, Govt. of Odisha ( Site Link )</li>
-                <li>Patra Tours And Travels - Member of "Indian Association of Tour Operators" ( IATO) ( Site Link )</li>
-            </ul>
-        </div>
+<div class="details-card">
+    <div class="details-header">Check the Authenticity of our Company</div>
+    <div class="details-content">
+        <ul>
+            <li>Patra Tours And Travels - Approved by Ministry of Tourism, Govt. of India ( <a href="#">Site Link 1</a>, <a href="#">Site Link 2</a> )</li>
+            <li>Patra Tours And Travels - Approved by Odisha Tourism, Govt. of Odisha ( <a href="#">Site Link</a> )</li>
+            <li>Patra Tours And Travels - Member of "Indian Association of Tour Operators" ( IATO) ( <a href="#">Site Link</a> )</li>
+        </ul>
+    </div>
+</div>
 
-        <div class="section">
-            <h2>Check Authentic Feedback of our Company</h2>
-            <p><a href="#">CLICK HERE</a></p>
-        </div>
-
+<div class="details-card">
+    <div class="details-header">Check Authentic Feedback of our Company</div>
+    <div class="details-content">
+        <p><a href="#" class="button">CLICK HERE</a></p>
+    </div>
+</div>
         <div class="footer">
             <p>Thank you for choosing our services. For any queries, please contact us.</p>
         </div>
