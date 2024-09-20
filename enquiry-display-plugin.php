@@ -116,16 +116,18 @@ function ced_generate_styled_html($data, $enquiry_id) {
 </head>
 <body class="enquiry-body">
     <div class="header-container">
-       
+            
+            <div class="header-top">
+            <div class="contact-info">
+                 <p> Maa Santoshi Tours & Travels </p>
+                <p> Recognized By Ministry Of Tourism, Govt. of India & Department of Tourism, Govt. of Odisha </p>
+            </div>
+        </div>
         <div class="header-bottom">
             <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maasantohsi-banner-1.png'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
         </div>
-        <div class="header-top">
-            <div class="contact-info">
-                <p>( Recognized By Ministry Of Tourism, Govt. of India & Department of Tourism, Govt. of Odisha )</p>
-                <p>Enquiry Quotation</p>
-            </div>
-        </div>
+        <p>Enquiry Quotation</p>
+
     </div>
 
     <div class="details-card">
