@@ -273,20 +273,61 @@ li {
 }
 
 /* Guest Details and Journey Details common styles */
-.guest-details, .journey-details {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+/* Two-column layout */
+.two-column-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
 }
 
-.guest-details-header, .journey-details-header {
+.column {
+    width: 48%; /* Adjust as needed, leaving some space between columns */
+}
+
+/* Details card common styles */
+.details-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.details-header {
     background-color: #4CAF50;
     color: white;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
+    padding: 15px;
     font-weight: bold;
-    margin: -15px -15px 15px -15px;
+    font-size: 18px;
+}
+
+.details-content {
+    padding: 20px;
+}
+
+/* Flexbox for detail items */
+.detail-item {
+    display: flex;
+    margin-bottom: 10px;
+    align-items: flex-start;
+}
+
+.detail-label {
+    font-weight: bold;
+    width: 40%;
+    padding-right: 10px;
+    color: #555;
+}
+
+.detail-value {
+    width: 60%;
+}
+
+/* Style for sub-headers in Journey Details */
+.journey-details h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #4CAF50;
+    font-size: 16px;
 }
 
 /* Responsive design for smaller screens */
@@ -298,5 +339,17 @@ li {
     .column {
         width: 100%;
         margin-bottom: 20px;
+    }
+
+    .detail-item {
+        flex-direction: column;
+    }
+
+    .detail-label, .detail-value {
+        width: 100%;
+    }
+
+    .detail-label {
+        margin-bottom: 5px;
     }
 }
