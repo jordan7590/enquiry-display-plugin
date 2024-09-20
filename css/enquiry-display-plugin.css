@@ -65,7 +65,7 @@
 .header-top {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .contact-info {
@@ -107,6 +107,7 @@
 
 .details-header {
     background-color: #0196fc;
+    text-transform: uppercase;
     color: white;
     padding: 15px;
     font-weight: bold;

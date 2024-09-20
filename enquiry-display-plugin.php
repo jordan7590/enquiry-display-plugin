@@ -138,7 +138,6 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="header-bottom">
             <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maasanothsi.png'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
         </div>
-        <p>Enquiry Quotation</p>
 
     </div>
 
