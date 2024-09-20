@@ -107,13 +107,17 @@ function ced_generate_styled_html($data, $enquiry_id) {
     ob_start();
     ?>
     <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
-    <?php wp_head(); ?>
-</head>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
+        <?php wp_head(); ?>
+        <!-- Include jsPDF library -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+        <!-- Include html2canvas library for better HTML rendering -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+    </head>
 <body class="enquiry-body">
     <div class="header-container">
         <div class="header-top">
@@ -443,6 +447,32 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="footer">
             <p>Thank you for choosing our services. For any queries, please contact us.</p>
         </div>
+
+
+        <div class="pdf-download">
+            <button onclick="generatePDF()" class="button">Download PDF</button>
+        </div>
+
+        <script>
+        function generatePDF() {
+            const { jsPDF } = window.jspdf;
+
+            html2canvas(document.getElementById('enquiry-content')).then(canvas => {
+                const imgData = canvas.toDataURL('image/png');
+                const pdf = new jsPDF('p', 'mm', 'a4');
+                const pdfWidth = pdf.internal.pageSize.getWidth();
+                const pdfHeight = pdf.internal.pageSize.getHeight();
+                const imgWidth = canvas.width;
+                const imgHeight = canvas.height;
+                const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
+                const imgX = (pdfWidth - imgWidth * ratio) / 2;
+                const imgY = 30;
+
+                pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
+                pdf.save('enquiry_<?php echo esc_js($enquiry_id); ?>.pdf');
+            });
+        }
+        </script>
     </body>
     </html>
     <?php
