@@ -162,7 +162,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="details-header">Welcome</div>
         <div class="details-content">
             <p class="welcome-message">
-                Hi <span class="customer-name">Mr. <?php echo esc_html($data['guest_details']['name']); ?></span>,
+                Hi <span class="customer-name"> <b>Mr. <?php echo esc_html($data['guest_details']['name']); ?></span></b>,
             </p>
             <p class="welcome-message">
                 <span>Warm Greetings from Maa Santoshi Tours And Travels!</span> We're thrilled that you've chosen us for your travel needs. Thank you for your query at Maa Santoshi Tours And Travels. We've prepared a special quotation just for you.
