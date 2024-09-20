@@ -379,41 +379,13 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="details-header">Payment Options</div>
         <div class="details-content">
             <div class="highlight">
-                <strong>NOTE:</strong> After successful payment, share the UTR Number / Screenshot via Whatsapp on 83379-11111 or mail us on account@patratravels.com with your Enquiry ID / Confirmed ID.
+                <strong>NOTE:</strong> After successful payment, share the UTR Number / Screenshot via Whatsapp on
+                78558 84045 or mail us on santoshim309@gmail.com with your Enquiry ID / Confirmed ID.
             </div>
             
-            <h3>Wallet Options</h3>
-            <ul>
-                <li><strong>Google Pay:</strong> 83379-11111</li>
-                <li><strong>PhonePe:</strong> 83379-11111</li>
-                <li><strong>Amazon Pay:</strong> 83379-11111</li>
-                <li><strong>Paytm:</strong> 83379-11111</li>
-            </ul>
+            <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maa-santohsi-travels-upi.jpeg'); ?>" alt="Maa Santoshi Travels UPI">
             
-            <h3>UPI ID</h3>
-            <p>Q790352025@ybl</p>
-            
-            <h3>Bank Account Details (Money Transfer via IMPS or NEFT or RTGS)</h3>
-            <div class="bank-details">
-                <?php
-                $banks = array(
-                    array("ICICI Bank", "658605601391", "Patra Tours And Travels", "Vivekananda Marg, BBSR", "ICIC0006586"),
-                    array("SBI Bank", "36450525199", "Patra Tours And Travels", "Rajpath Branch, BBSR", "SBIN0007188"),
-                    array("Bank of India", "557120110000118", "Patra Tours And Travels", "Tankapani Rd, BBSR", "BKID0005571"),
-                    array("HDFC Bank", "50200008530861", "Patra Tours And Travels", "Vivekananda Marg, BBSR", "HDFC0002402"),
-                    array("Yes Bank", "9383800003577", "Patra Tours And Travels", "Bapuji Nagar, BBSR", "YESB0000093")
-                );
-                foreach ($banks as $bank) {
-                    echo '<div class="bank-card">';
-                    echo '<p><strong>Bank Name:</strong> ' . esc_html($bank[0]) . '</p>';
-                    echo '<p><strong>Account Number:</strong> ' . esc_html($bank[1]) . '</p>';
-                    echo '<p><strong>Account Name:</strong> ' . esc_html($bank[2]) . '</p>';
-                    echo '<p><strong>Bank Address:</strong> ' . esc_html($bank[3]) . '</p>';
-                    echo '<p><strong>IFSC CODE:</strong> ' . esc_html($bank[4]) . '</p>';
-                    echo '</div>';
-                }
-                ?>
-            </div>
+           
         </div>
     </div>
 
