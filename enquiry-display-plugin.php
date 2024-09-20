@@ -168,7 +168,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
             Warm Greetings from Maa Santoshi Tours And Travels! We're thrilled that you've chosen us for your travel needs. Thank you for your query at Maa Santoshi Tours And Travels. We've prepared a special quotation just for you.
         </p>
         <p class="welcome-message">
-            <span class="highlight">Please note:</span> This response to your query doesn't confirm the Cab / Coach / Hotel / Tour Package. To secure your booking with instant confirmation, please contact our customer service.
+            Please note: This response to your query doesn't confirm the Cab / Coach / Hotel / Tour Package. To secure your booking with instant confirmation, please contact our customer service.
         </p>
     </div>
 </div>
