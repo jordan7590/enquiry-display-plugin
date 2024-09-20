@@ -396,35 +396,36 @@ function ced_generate_styled_html($data, $enquiry_id) {
         </div>
         <div class="column">
    
-        <div class="details-card">
-    <div class="details-header">Cancellation Policy</div>
-    <div class="details-content">
-        <ul>
-            <li>Within 0 - 24 hours: <strong>15%</strong> Cancellation charges on the total billing amount</li>
-            <li>Within 24 - 48 hours: <strong>10%</strong> Cancellation charges on the total billing amount</li>
-            <li>Above 48 hours: <strong>5%</strong> Cancellation charges on the total billing amount</li>
-        </ul>
-    </div>
-</div>
+            <div class="details-card">
+                <div class="details-header">Cancellation Policy</div>
+                <div class="details-content">
+                    <ul>
+                        <li>Within 0 - 24 hours: <strong>15%</strong> Cancellation charges on the total billing amount</li>
+                        <li>Within 24 - 48 hours: <strong>10%</strong> Cancellation charges on the total billing amount</li>
+                        <li>Above 48 hours: <strong>5%</strong> Cancellation charges on the total billing amount</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="details-card">
+                <div class="details-header">Terms and Conditions</div>
+                <div class="details-content">
+                    <ul>
+                        <li>Driver Details And Cab Regn Number Details will be provided before 03 Hours of Arrival Time</li>
+                        <li>Up-gradation of Cab is Possible on Extra Charges</li>
+                        <li>Standing AC {Per 30 Min @ Rs. 400 (Sedan & SUV Cabs), Rs.600 (Tempo Traveller), Rs.1000(Coach)}</li>
+                        <li>Per Day Maximum Allowed Time for Transportation is 12 Hrs</li>
+                        <li>Maximum Driver Duty Time is up to 10 Pm</li>
+                        <li>While driving on Ghat roads, Air-Conditioning shall remain switched off</li>
+                        <li>All disputes are subject to Bhubaneswar legal jurisdiction only</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 
 
-
-<div class="details-card">
-    <div class="details-header">Terms and Conditions</div>
-    <div class="details-content">
-        <ul>
-            <li>Driver Details And Cab Regn Number Details will be provided before 03 Hours of Arrival Time</li>
-            <li>Up-gradation of Cab is Possible on Extra Charges</li>
-            <li>Standing AC {Per 30 Min @ Rs. 400 (Sedan & SUV Cabs), Rs.600 (Tempo Traveller), Rs.1000(Coach)}</li>
-            <li>Per Day Maximum Allowed Time for Transportation is 12 Hrs</li>
-            <li>Maximum Driver Duty Time is up to 10 Pm</li>
-            <li>While driving on Ghat roads, Air-Conditioning shall remain switched off</li>
-            <li>All disputes are subject to Bhubaneswar legal jurisdiction only</li>
-        </ul>
-    </div>
-</div>
 
 <div class="details-card">
     <div class="details-header">Disclaimers</div>
