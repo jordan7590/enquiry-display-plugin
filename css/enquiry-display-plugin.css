@@ -1,6 +1,9 @@
+/* Import Roboto font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
 /* General styles */
 .enquiry-body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', Arial, sans-serif;
     line-height: 1.6;
     color: #333;
     max-width: 1000px;
@@ -8,6 +11,18 @@
     padding: 20px;
     background-color: #f0f0f0;
 }
+.enquiry-body h1, .enquiry-body h2 {
+    font-weight: 700; /* Bold */
+}
+
+.enquiry-body p {
+    font-weight: 400; /* Regular */
+}
+
+.enquiry-body .light-text {
+    font-weight: 300; /* Light */
+}
+
 .enquiry-details {
     display: flex;
     justify-content: space-between;
