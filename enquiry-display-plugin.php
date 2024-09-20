@@ -175,7 +175,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
 
             <div class="section">
-                <h2>Guest Details</h2>
+                <div class="guest-details">
+                <div class="guest-details-header">Guest Details</div>
                 <table>
                     <tr>
                         <th>Name</th>
@@ -198,6 +199,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
                         <td><?php echo esc_html($data['guest_details']['durations']); ?> days</td>
                     </tr>
                 </table>
+                </div>
+               
             </div>
 
             <div class="section">

@@ -240,3 +240,20 @@ li {
     transform: rotate(-20deg);
     border: 2px solid #FF6B6B;
 }
+
+.guest-details {
+    background-color: white;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.guest-details-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    font-weight: bold;
+    margin: -15px -15px 15px -15px;
+}
