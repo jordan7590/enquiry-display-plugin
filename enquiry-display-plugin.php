@@ -118,6 +118,9 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <!-- Include html2canvas library for better HTML rendering -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
     </head>
+
+
+
 <body class="enquiry-body">
     <div class="header-container">
         <div class="header-top">
@@ -449,15 +452,38 @@ function ced_generate_styled_html($data, $enquiry_id) {
         </div>
 
 
-        <div class="pdf-download">
+
+
+
+
+
+
+
+        
+ <div class="pdf-download">
             <button onclick="generatePDF()" class="button">Download PDF</button>
         </div>
 
         <script>
         function generatePDF() {
+            console.log('Generate PDF function called');
+            
+            if (typeof window.jspdf === 'undefined') {
+                console.error('jsPDF library not loaded');
+                alert('PDF generation failed: Required library not loaded');
+                return;
+            }
+            
+            if (typeof html2canvas === 'undefined') {
+                console.error('html2canvas library not loaded');
+                alert('PDF generation failed: Required library not loaded');
+                return;
+            }
+
             const { jsPDF } = window.jspdf;
 
             html2canvas(document.getElementById('enquiry-content')).then(canvas => {
+                console.log('HTML to canvas conversion successful');
                 const imgData = canvas.toDataURL('image/png');
                 const pdf = new jsPDF('p', 'mm', 'a4');
                 const pdfWidth = pdf.internal.pageSize.getWidth();
@@ -470,8 +496,27 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
                 pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
                 pdf.save('enquiry_<?php echo esc_js($enquiry_id); ?>.pdf');
+                console.log('PDF generated and save initiated');
+            }).catch(error => {
+                console.error('Error in html2canvas:', error);
+                alert('PDF generation failed: ' + error.message);
             });
         }
+
+        // Check if libraries are loaded
+        window.addEventListener('load', function() {
+            if (typeof window.jspdf === 'undefined') {
+                console.error('jsPDF library not loaded');
+            } else {
+                console.log('jsPDF library loaded successfully');
+            }
+            
+            if (typeof html2canvas === 'undefined') {
+                console.error('html2canvas library not loaded');
+            } else {
+                console.log('html2canvas library loaded successfully');
+            }
+        });
         </script>
     </body>
     </html>
