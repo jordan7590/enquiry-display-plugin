@@ -135,11 +135,13 @@ li {
 }
 .itinerary-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     margin-bottom: 10px;
+    flex-direction: column;
 }
 .itinerary-time {
-    width: 80px;
+    /* width: 80px; */
+    border-bottom: dotted 1px #7e7e7e;
     font-weight: bold;
     color: #333;
 }
