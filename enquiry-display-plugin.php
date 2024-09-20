@@ -133,21 +133,19 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
     <div class="details-card">
         <div class="details-header">Enquiry Details</div>
-        <div class="details-content">
-            <div class="enquiry-details">
-                <div class="enquiry-id">
-                    Enquiry ID<br>
-                    EN140111
-                </div>
-                <div class="date-details">
-                    <div>Pickup Date : 28-Sep-2024 10.00 AM</div>
-                    <div>Return Date : 01-Oct-2024 18.00 PM</div>
-                </div>
-                <div class="enquiry-stamp">
-                    ENQUIRY
-                </div>
-            </div>
-        </div>
+        <div class="enquiry-details">
+    <div class="enquiry-id">
+        Enquiry ID<br>
+        EN140111
+    </div>
+    <div class="date-details">
+        <div>Pickup Date : 28-Sep-2024 10.00 AM</div>
+        <div>Return Date : 01-Oct-2024 18.00 PM</div>
+    </div>
+    <div class="enquiry-stamp">
+        ENQUIRY
+    </div>
+</div>
     </div>
 
     <div class="details-card">
