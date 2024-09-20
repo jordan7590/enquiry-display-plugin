@@ -1,198 +1,37 @@
+/* General styles */
 .enquiry-body {
-    font-family: Arial, sans-serif !important;
-    line-height: 1.6 !important;
-    color: #333 !important;
-    max-width: 1000px !important;
-    margin: auto !important; /* This will center the content horizontally */
-    padding: 20px !important;
-    background-color: #f0f0f0 !important;
-}
-.container {
-    background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-.header {
-    text-align: center;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 20px;
-}
-
-h1, h2, h3, h4 {
-    color: #0066cc;
-    margin-top: 30px;
-    margin-bottom: 15px;
-}
-h1 {
-    font-size: 24px;
-}
-h2 {
-    font-size: 20px;
-    border-bottom: 1px solid #0066cc;
-    padding-bottom: 10px;
-}
-h3 {
-    font-size: 18px;
-}
-h4 {
-    font-size: 16px;
-}
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
-}
-th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-}
-th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-}
-.section {
-    margin-bottom: 30px;
-}
-.footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 0.9em;
-    color: #666;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-}
-ul {
-    padding-left: 20px;
-    margin-bottom: 20px;
-}
-li {
-    margin-bottom: 10px;
-}
-.bank-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-.bank-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    width: calc(50% - 10px);
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-}
-.bank-card p {
-    margin: 5px 0;
-}
-.highlight {
-    background-color: #ffffcc;
-    padding: 10px;
-    border: 1px solid #e6e600;
-    margin-bottom: 20px;
-}
-.button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #0066cc;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-@media print {
-    body {
-        max-width: 100%;
-        background-color: #fff;
-    }
-    .container {
-        box-shadow: none;
-    }
-    .bank-card {
-        page-break-inside: avoid;
-    }
-}
-
-.itinerary-container {
-    background-color: #f0f0f0;
-    padding: 20px;
-    border-radius: 10px;
-}
-.itinerary-day {
-    background-color: white;
-    border-radius: 10px;
-    padding: 15px;
-    margin-bottom: 20px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-.day-header {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px;
-    border-radius: 5px 5px 0 0;
-    font-weight: bold;
-    margin: -15px -15px 15px -15px;
-}
-.itinerary-item {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 10px;
-    flex-direction: column;
-}
-.itinerary-time {
-    /* width: 80px; */
-    border-bottom: dotted 1px #7e7e7e;
-    font-weight: bold;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     color: #333;
-}
-.itinerary-description {
-    flex-grow: 1;
-}
-.itinerary-image {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-left: 15px;
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f0f0f0;
 }
 
-/* header  */
-
+/* Header styles */
 .header-container {
     display: flex;
-    align-items: stretch;
-    /* height: 300px; */
-    overflow: hidden;
-    background-color: yellow;
     flex-direction: column;
-    padding: 20px;
     background: linear-gradient(to left, #fff 50%, #F28027 50%);
+    padding: 20px;
+    margin-bottom: 20px;
 }
 
 .header-top {
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
+}
+
+.contact-info {
+    color: #000;
+    font-size: 14px;
 }
 
 .logo {
     max-width: 150px;
     height: auto;
-}
-
-.header-buttom{
-
-}
-
-
-
-
-
-.contact-info {
-    color: #000;
-    font-size: 14px;
-    line-height: 1.5;
 }
 
 .tagline {
@@ -201,80 +40,19 @@ li {
     text-align: right;
 }
 
-.welcome-section {
-    /* background: linear-gradient(135deg, #f6d365 0%, #fda085 100%); */
-    color: #333;
-    font-family: 'Arial', sans-serif;
+.header-bottom img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
 }
 
-.customer-name {
-    font-weight: bold;
-    color: #4A90E2;
-}
-
-
-.enquiry-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    padding: 10px;
-}
-.enquiry-id {
-    font-weight: bold;
-    font-size: 18px;
-}
-.date-details {
-    text-align: center;
-}
-.enquiry-stamp {
-    width: 80px;
-    height: 80px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #FF6B6B;
-    transform: rotate(-20deg);
-    border: 2px solid #FF6B6B;
-}
-
-
-
-/* Two-column layout */
-.two-column-section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.column {
-    width: 48%; /* Adjust as needed, leaving some space between columns */
-}
-
-/* Guest Details and Journey Details common styles */
-/* Two-column layout */
-.two-column-section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.column {
-    width: 48%; /* Adjust as needed, leaving some space between columns */
-}
-
-/* Details card common styles */
+/* Details card styles */
 .details-card {
     background-color: white;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-    height: 330px;
+    margin-bottom: 30px;
 }
 
 .details-header {
@@ -289,7 +67,18 @@ li {
     padding: 20px;
 }
 
-/* Flexbox for detail items */
+/* Two-column layout */
+.two-column-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.column {
+    width: 48%;
+}
+
+/* Detail items */
 .detail-item {
     display: flex;
     margin-bottom: 10px;
@@ -307,20 +96,96 @@ li {
     width: 60%;
 }
 
-/* Style for sub-headers in Journey Details */
-.journey-details h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #4CAF50;
-    font-size: 16px;
+/* Itinerary styles */
+.itinerary-container {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
 }
-.guest-details h3 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    color: #4CAF50;
-    font-size: 16px;
+
+.itinerary-day {
+    margin-bottom: 20px;
 }
-/* Responsive design for smaller screens */
+
+.day-header {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.itinerary-item {
+    margin-bottom: 10px;
+}
+
+.itinerary-time {
+    font-weight: bold;
+    color: #333;
+}
+
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+/* Highlight box */
+.highlight {
+    background-color: #ffffcc;
+    padding: 15px;
+    border: 1px solid #e6e600;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Bank details */
+.bank-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.bank-card {
+    border: 1px solid #ddd;
+    padding: 15px;
+    width: calc(50% - 10px);
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+}
+
+/* List styles */
+ul {
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #ddd;
+    color: #666;
+}
+
+/* Responsive design */
 @media (max-width: 768px) {
     .two-column-section {
         flex-direction: column;
@@ -328,7 +193,10 @@ li {
 
     .column {
         width: 100%;
-        margin-bottom: 20px;
+    }
+
+    .bank-card {
+        width: 100%;
     }
 
     .detail-item {
@@ -337,9 +205,5 @@ li {
 
     .detail-label, .detail-value {
         width: 100%;
-    }
-
-    .detail-label {
-        margin-bottom: 5px;
     }
 }

@@ -107,152 +107,146 @@ function ced_generate_styled_html($data, $enquiry_id) {
     ob_start();
     ?>
     <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
-               <?php wp_head(); ?>
-
-
-
-    </head>
-    <body class="enquiry-body">
-        
-
-<div class="header-container">
-    <div class="header-top">
-        <div class="contact-info">
-            <p>📞 +91 78558 84045</p>
-            <p>✉️ santoshim309@gmail.com</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
+    <?php wp_head(); ?>
+</head>
+<body class="enquiry-body">
+    <div class="header-container">
+        <div class="header-top">
+            <div class="contact-info">
+                <p>📞 +91 78558 84045</p>
+                <p>✉️ santoshim309@gmail.com</p>
+            </div>
+            <div class="logo-container">
+                <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2023/03/Maa-Santoshi-Tours-Travels-768x432.png'); ?>" alt="Maa Santoshi Travels" class="logo">
+                <p class="tagline">Travel. Explore. Celebrate Life</p>
+            </div>
         </div>
-        <div class="logo-container">
-            <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2023/03/Maa-Santoshi-Tours-Travels-768x432.png'); ?>" alt="Maa Santoshi Travels" class="logo">
-            <p class="tagline">Travel. Explore. Celebrate Life</p>
+        <div class="header-bottom">
+            <img src="<?php echo esc_url('https://img.veenaworld.com/group-tours/world/europe/euep/euep-bnn-1.jpg'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
         </div>
     </div>
-    <div class="header-buttom">
-        <?php
-        // Use a default image from your theme or plugin directory if the placeholder doesn't work
-        $default_image_url = plugins_url('images/default-header.jpg', __FILE__);
-        ?>
-        <img src="<?php echo esc_url('https://img.veenaworld.com/group-tours/world/europe/euep/euep-bnn-1.jpg'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
-       
-    </div>
-</div>
 
-
-
-
-<div class="enquiry-details">
-    <div class="enquiry-id">
-        Enquiry ID<br>
-        EN140111
-    </div>
-    <div class="date-details">
-        <div>Pickup Date : 28-Sep-2024 10.00 AM</div>
-        <div>Return Date : 01-Oct-2024 18.00 PM</div>
-    </div>
-    <div class="enquiry-stamp">
-        ENQUIRY
-    </div>
-</div>
-
-
-<div class="welcome-section">
-    <div class="">
-        <p class="welcome-message">
-            Hi <span class="customer-name"> Mr.<?php echo esc_html($data['guest_details']['name']); ?></span>,
-        </p>
-        <p class="welcome-message">
-          <span> Warm Greetings from Maa Santoshi Tours And Travels! </span> We're thrilled that you've chosen us for your travel needs. Thank you for your query at Maa Santoshi Tours And Travels. We've prepared a special quotation just for you.
-        </p>
-        <p class="welcome-message">
-            Please note: This response to your query doesn't confirm the Cab / Coach / Hotel / Tour Package. To secure your booking with instant confirmation, please contact our customer service.
-        </p>
-    </div>
-</div>
-
-
-         <!-- Guest Details and Journey Details Section -->
-<!-- Guest Details and Journey Details Section -->
-<div class="two-column-section">
-    <div class="column">
-        <div class="details-card">
-            <div class="details-header">Guest Details</div>
-            <div class="details-content">
-                <div class="detail-item">
-                    <span class="detail-label">Name:</span>
-                    <span class="detail-value"><?php echo esc_html($data['guest_details']['name']); ?></span>
+    <div class="details-card">
+        <div class="details-header">Enquiry Details</div>
+        <div class="details-content">
+            <div class="enquiry-details">
+                <div class="enquiry-id">
+                    Enquiry ID<br>
+                    EN140111
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Contact Number:</span>
-                    <span class="detail-value"><?php echo esc_html($data['guest_details']['contact_number']); ?></span>
+                <div class="date-details">
+                    <div>Pickup Date : 28-Sep-2024 10.00 AM</div>
+                    <div>Return Date : 01-Oct-2024 18.00 PM</div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Email:</span>
-                    <span class="detail-value"><?php echo esc_html($data['guest_details']['email']); ?></span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Number of Passengers:</span>
-                    <span class="detail-value"><?php echo esc_html($data['guest_details']['no_of_passengers']); ?></span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Duration:</span>
-                    <span class="detail-value"><?php echo esc_html($data['guest_details']['durations']); ?> days</span>
+                <div class="enquiry-stamp">
+                    ENQUIRY
                 </div>
             </div>
         </div>
     </div>
-    <div class="column">
-        <div class="details-card journey-details">
-            <div class="details-header">Journey Details</div>
-            <div class="details-content">
-                <h3>Arrival</h3>
-                <div class="detail-item">
-                    <span class="detail-label">Date:</span>
-                    <span class="detail-value"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></span>
+
+    <div class="details-card">
+        <div class="details-header">Welcome</div>
+        <div class="details-content">
+            <p class="welcome-message">
+                Hi <span class="customer-name">Mr. <?php echo esc_html($data['guest_details']['name']); ?></span>,
+            </p>
+            <p class="welcome-message">
+                <span>Warm Greetings from Maa Santoshi Tours And Travels!</span> We're thrilled that you've chosen us for your travel needs. Thank you for your query at Maa Santoshi Tours And Travels. We've prepared a special quotation just for you.
+            </p>
+            <p class="welcome-message">
+                Please note: This response to your query doesn't confirm the Cab / Coach / Hotel / Tour Package. To secure your booking with instant confirmation, please contact our customer service.
+            </p>
+        </div>
+    </div>
+
+    <div class="two-column-section">
+        <div class="column">
+            <div class="details-card">
+                <div class="details-header">Guest Details</div>
+                <div class="details-content">
+                    <div class="detail-item">
+                        <span class="detail-label">Name:</span>
+                        <span class="detail-value"><?php echo esc_html($data['guest_details']['name']); ?></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Contact Number:</span>
+                        <span class="detail-value"><?php echo esc_html($data['guest_details']['contact_number']); ?></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Email:</span>
+                        <span class="detail-value"><?php echo esc_html($data['guest_details']['email']); ?></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Number of Passengers:</span>
+                        <span class="detail-value"><?php echo esc_html($data['guest_details']['no_of_passengers']); ?></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Duration:</span>
+                        <span class="detail-value"><?php echo esc_html($data['guest_details']['durations']); ?> days</span>
+                    </div>
                 </div>
-                <div class="detail-item">
-                    <span class="detail-label">Address:</span>
-                    <span class="detail-value"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_address']); ?></span>
-                </div>
-                <h3>Departure</h3>
-                <div class="detail-item">
-                    <span class="detail-label">Date:</span>
-                    <span class="detail-value"><?php echo esc_html($data['journey_details']['departure_details']['arrival_date']); ?></span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Address:</span>
-                    <span class="detail-value"><?php echo esc_html($data['journey_details']['departure_details']['departure_address']); ?></span>
+            </div>
+        </div>
+        <div class="column">
+            <div class="details-card">
+                <div class="details-header">Journey Details</div>
+                <div class="details-content">
+                    <h3>Arrival</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Date:</span>
+                        <span class="detail-value"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Address:</span>
+                        <span class="detail-value"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_address']); ?></span>
+                    </div>
+                    <h3>Departure</h3>
+                    <div class="detail-item">
+                        <span class="detail-label">Date:</span>
+                        <span class="detail-value"><?php echo esc_html($data['journey_details']['departure_details']['arrival_date']); ?></span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Address:</span>
+                        <span class="detail-value"><?php echo esc_html($data['journey_details']['departure_details']['departure_address']); ?></span>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
-          <div class="section">
-    <h2>Itinerary</h2>
-    <div class="itinerary-container">
-        <?php foreach ($data['itinery_details'] as $index => $day): ?>
-            <div class="itinerary-day">
-                <div class="day-header">Day <?php echo $index + 1; ?>: <?php echo esc_html($day['title']); ?></div>
-                <?php
-                $activities = explode("\n", $day['description']);
-                ?>
-                <?php foreach ($activities as $activity): ?>
-                    <?php if (trim($activity)): ?>
-                        <div class="itinerary-item">
-                        <div class="itinerary-time"><?php echo esc_html($day['date&day']); ?></div>
-                        <div class="itinerary-description"><?php echo esc_html($day['description']); ?></div>
-                        </div>
-                    <?php endif; ?>
+
+    <div class="details-card">
+        <div class="details-header">Itinerary</div>
+        <div class="details-content">
+            <div class="itinerary-container">
+                <?php foreach ($data['itinery_details'] as $index => $day): ?>
+                    <div class="itinerary-day">
+                        <div class="day-header">Day <?php echo $index + 1; ?>: <?php echo esc_html($day['title']); ?></div>
+                        <?php
+                        $activities = explode("\n", $day['description']);
+                        ?>
+                        <?php foreach ($activities as $activity): ?>
+                            <?php if (trim($activity)): ?>
+                                <div class="itinerary-item">
+                                    <div class="itinerary-time"><?php echo esc_html($day['date&day']); ?></div>
+                                    <div class="itinerary-description"><?php echo esc_html($activity); ?></div>
+                                </div>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
                 <?php endforeach; ?>
             </div>
-        <?php endforeach; ?>
+        </div>
     </div>
-</div>
-              <div class="section">
-            <h2>Rate Details</h2>
+
+    <div class="details-card">
+        <div class="details-header">Rate Details</div>
+        <div class="details-content">
             <table>
                 <tr>
                     <th>#</th>
@@ -284,7 +278,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
                 $gst_amount = $subtotal * ($gst_rate / 100);
                 $total_with_gst = $subtotal + $gst_amount;
                 $total_rounded = ceil($total_with_gst);
-                $advanced_payment = 5000.00; // Hardcoded as per screenshot
+                $advanced_payment = 5000.00;
                 $balance_due = $total_rounded - $advanced_payment;
                 ?>
                 <tr>
@@ -299,100 +293,98 @@ function ced_generate_styled_html($data, $enquiry_id) {
                     <td colspan="4" class="text-right font-bold">TOTAL(ROUND)</td>
                     <td><?php echo number_format($total_rounded, 2); ?></td>
                 </tr>
-                <!-- <tr>-->
-                <!--    <td colspan="4" class="text-right font-bold">TOTAL IN WORDS: </td>-->
-                <!--    <td><?php echo ced_number_to_words($total_rounded); ?> RUPEES ONLY</td>-->
-                <!--</tr>-->
                 <tr>
                     <td colspan="4" class="text-right font-bold">ADVANCED TO BE PAID</td>
                     <td><?php echo number_format($advanced_payment, 2); ?></td>
                 </tr>
-                <!-- <tr>-->
-                <!--    <td colspan="4" class="text-right font-bold">ADVANCED TO BE PAID IN WORDS</td>-->
-                <!--    <td> <?php echo ced_number_to_words($advanced_payment); ?> RUPEES ONLY</td>-->
-                <!--</tr>-->
             </table>
-            
         </div>
+    </div>
 
-            <div class="section">
-                <h2>Tax & Discount</h2>
-                <table>
-                    <tr>
-                        <th>GST</th>
-                        <td><?php echo esc_html($data['tax&dis']['gst']); ?>%</td>
-                    </tr>
-                    <tr>
-                        <th>Discount</th>
-                        <td><?php echo esc_html($data['tax&dis']['discount']); ?>%</td>
-                    </tr>
-                </table>
-            </div>
+    <div class="details-card">
+        <div class="details-header">Tax & Discount</div>
+        <div class="details-content">
+            <table>
+                <tr>
+                    <th>GST</th>
+                    <td><?php echo esc_html($data['tax&dis']['gst']); ?>%</td>
+                </tr>
+                <tr>
+                    <th>Discount</th>
+                    <td><?php echo esc_html($data['tax&dis']['discount']); ?>%</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 
-            <div class="section">
-                <h2>Inclusion and Exclusion</h2>
-                <h3>What your package includes</h3>
-                <ul>
-                    <li>All Transport related charges (Fuel, Toll Charges, State Taxes & Parking Charges)</li>
-                    <li>Driver Allowances</li>
-                    <li>Cab Will be with you from your arrival till departure</li>
-                    <li>All Transfer & Sightseeing as per itinerary</li>
-                    <li>GST (5%) added to Total Billing</li>
-                </ul>
-                <h3>What Your Package Doesn't Includes</h3>
-                <ul>
-                    <li>Hotel Booking</li>
-                    <li>Any Airfare / Train Fare</li>
-                    <li>Boating Charges</li>
-                    <li>Travel Insurance</li>
-                    <li>Monument Entrance Fees, Guide, other expenses not mentioned in inclusion</li>
-                    <li>Any sightseeing or excursion that is not mentioned in the itinerary</li>
-                    <li>Any item of personal requirement, such as drinks, Tips, laundry, telephone, etc</li>
-                    <li>Any medical or evacuation expenses</li>
-                    <li>Any expenses occur due to natural climate, security, roadblocks, Vehicle Malfunctions and other unexpected reason</li>
-                    <li>Anything not mentioned in Inclusion</li>
-                </ul>
-            </div>
+    <div class="details-card">
+        <div class="details-header">Inclusion and Exclusion</div>
+        <div class="details-content">
+            <h3>What your package includes</h3>
+            <ul>
+                <li>All Transport related charges (Fuel, Toll Charges, State Taxes & Parking Charges)</li>
+                <li>Driver Allowances</li>
+                <li>Cab Will be with you from your arrival till departure</li>
+                <li>All Transfer & Sightseeing as per itinerary</li>
+                <li>GST (5%) added to Total Billing</li>
+            </ul>
+            <h3>What Your Package Doesn't Includes</h3>
+            <ul>
+                <li>Hotel Booking</li>
+                <li>Any Airfare / Train Fare</li>
+                <li>Boating Charges</li>
+                <li>Travel Insurance</li>
+                <li>Monument Entrance Fees, Guide, other expenses not mentioned in inclusion</li>
+                <li>Any sightseeing or excursion that is not mentioned in the itinerary</li>
+                <li>Any item of personal requirement, such as drinks, Tips, laundry, telephone, etc</li>
+                <li>Any medical or evacuation expenses</li>
+                <li>Any expenses occur due to natural climate, security, roadblocks, Vehicle Malfunctions and other unexpected reason</li>
+                <li>Anything not mentioned in Inclusion</li>
+            </ul>
+        </div>
+    </div>
 
-            <div class="section">
-                <h2>PAYMENT OPTIONS</h2>
-                <div class="highlight">
-                    <strong>NOTE:</strong> After successful payment, share the UTR Number / Screenshot via Whatsapp on 83379-11111 or mail us on account@patratravels.com with your Enquiry ID / Confirmed ID.
-                </div>
-                
-                <h3>WALLET OPTIONS</h3>
-                <ul>
-                    <li><strong>Google Pay:</strong> 83379-11111</li>
-                    <li><strong>PhonePe:</strong> 83379-11111</li>
-                    <li><strong>Amazon Pay:</strong> 83379-11111</li>
-                    <li><strong>Paytm:</strong> 83379-11111</li>
-                </ul>
-                
-                <h3>UPI ID</h3>
-                <p>Q790352025@ybl</p>
-                
-                <h3>BANK ACCOUNT DETAILS (Money Transfer via IMPS or NEFT or RTGS)</h3>
-                <div class="bank-details">
-                    <?php
-                    $banks = array(
-                        array("ICICI Bank", "658605601391", "Patra Tours And Travels", "Vivekananda Marg, BBSR", "ICIC0006586"),
-                        array("SBI Bank", "36450525199", "Patra Tours And Travels", "Rajpath Branch, BBSR", "SBIN0007188"),
-                        array("Bank of India", "557120110000118", "Patra Tours And Travels", "Tankapani Rd, BBSR", "BKID0005571"),
-                        array("HDFC Bank", "50200008530861", "Patra Tours And Travels", "Vivekananda Marg, BBSR", "HDFC0002402"),
-                        array("Yes Bank", "9383800003577", "Patra Tours And Travels", "Bapuji Nagar, BBSR", "YESB0000093")
-                    );
-                    foreach ($banks as $bank) {
-                        echo '<div class="bank-card">';
-                        echo '<p><strong>Bank Name:</strong> ' . esc_html($bank[0]) . '</p>';
-                        echo '<p><strong>Account Number:</strong> ' . esc_html($bank[1]) . '</p>';
-                        echo '<p><strong>Account Name:</strong> ' . esc_html($bank[2]) . '</p>';
-                        echo '<p><strong>Bank Address:</strong> ' . esc_html($bank[3]) . '</p>';
-                        echo '<p><strong>IFSC CODE:</strong> ' . esc_html($bank[4]) . '</p>';
-                        echo '</div>';
-                    }
-                    ?>
-                </div>
+    <div class="details-card">
+        <div class="details-header">Payment Options</div>
+        <div class="details-content">
+            <div class="highlight">
+                <strong>NOTE:</strong> After successful payment, share the UTR Number / Screenshot via Whatsapp on 83379-11111 or mail us on account@patratravels.com with your Enquiry ID / Confirmed ID.
             </div>
+            
+            <h3>Wallet Options</h3>
+            <ul>
+                <li><strong>Google Pay:</strong> 83379-11111</li>
+                <li><strong>PhonePe:</strong> 83379-11111</li>
+                <li><strong>Amazon Pay:</strong> 83379-11111</li>
+                <li><strong>Paytm:</strong> 83379-11111</li>
+            </ul>
+            
+            <h3>UPI ID</h3>
+            <p>Q790352025@ybl</p>
+            
+            <h3>Bank Account Details (Money Transfer via IMPS or NEFT or RTGS)</h3>
+            <div class="bank-details">
+                <?php
+                $banks = array(
+                    array("ICICI Bank", "658605601391", "Patra Tours And Travels", "Vivekananda Marg, BBSR", "ICIC0006586"),
+                    array("SBI Bank", "36450525199", "Patra Tours And Travels", "Rajpath Branch, BBSR", "SBIN0007188"),
+                    array("Bank of India", "557120110000118", "Patra Tours And Travels", "Tankapani Rd, BBSR", "BKID0005571"),
+                    array("HDFC Bank", "50200008530861", "Patra Tours And Travels", "Vivekananda Marg, BBSR", "HDFC0002402"),
+                    array("Yes Bank", "9383800003577", "Patra Tours And Travels", "Bapuji Nagar, BBSR", "YESB0000093")
+                );
+                foreach ($banks as $bank) {
+                    echo '<div class="bank-card">';
+                    echo '<p><strong>Bank Name:</strong> ' . esc_html($bank[0]) . '</p>';
+                    echo '<p><strong>Account Number:</strong> ' . esc_html($bank[1]) . '</p>';
+                    echo '<p><strong>Account Name:</strong> ' . esc_html($bank[2]) . '</p>';
+                    echo '<p><strong>Bank Address:</strong> ' . esc_html($bank[3]) . '</p>';
+                    echo '<p><strong>IFSC CODE:</strong> ' . esc_html($bank[4]) . '</p>';
+                    echo '</div>';
+                }
+                ?>
+            </div>
+        </div>
+    </div>
 
             <div class="section">
                 <h2>Cancellation Policy</h2>
