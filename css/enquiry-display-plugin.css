@@ -69,8 +69,14 @@
 }
 
 .contact-info {
-    color: #000;
-    font-size: 14px;
+    color: #000000;
+    display: flex;
+    font-size: 18px;
+    font-weight: 900;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 .logo {
