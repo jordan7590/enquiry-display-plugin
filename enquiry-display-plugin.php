@@ -165,7 +165,10 @@ function ced_generate_styled_html($data, $enquiry_id) {
                 Hi <span class="customer-name"> <b>Mr. <?php echo esc_html($data['guest_details']['name']); ?></span></b>,
             </p>
             <p class="welcome-message">
-                <span>Warm Greetings from Maa Santoshi Tours And Travels!</span> We're thrilled that you've chosen us for your travel needs. Thank you for your query at Maa Santoshi Tours And Travels. We've prepared a special quotation just for you.
+                Warm Greetings from Maa Santoshi Tours And Travels!
+            </p>
+            <p class="welcome-message">
+                 We're thrilled that you've chosen us for your travel needs. Thank you for your query at Maa Santoshi Tours And Travels. We've prepared a special quotation just for you.
             </p>
             <p class="welcome-message">
                 Please note: This response to your query doesn't confirm the Cab / Coach / Hotel / Tour Package. To secure your booking with instant confirmation, please contact our customer service.
