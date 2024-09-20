@@ -239,9 +239,9 @@ function ced_generate_styled_html($data, $enquiry_id) {
     <div class="details-card">
         <div class="details-header">Itinerary</div>
         <div class="details-content">
-            
+            <div class="itinerary-container">
                 <?php foreach ($data['itinery_details'] as $index => $day): ?>
-                    <div class="itinerary-container"></div>
+                    
                     <div class="itinerary-day">
                         <div class="day-header">Day <?php echo $index + 1; ?>: <?php echo esc_html($day['title']); ?></div>
                         <?php
@@ -256,9 +256,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
                             <?php endif; ?>
                         <?php endforeach; ?>
                     </div>
-                    </div>
                 <?php endforeach; ?>
-            
+            </div>
         </div>
     </div>
 
