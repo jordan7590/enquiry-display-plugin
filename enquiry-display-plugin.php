@@ -129,6 +129,14 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="header-bottom">
             <img src="<?php echo esc_url('https://img.veenaworld.com/group-tours/world/europe/euep/euep-bnn-1.jpg'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
         </div>
+        <div class="header-after-bottom">
+            <div class="maasantohsi">
+                <p>Maa Santoshi Tours & Travels</p>
+            </div>
+            <div class="right-text">
+                <p class="tagline">Travel. Explore. Celebrate Life</p>
+            </div>
+        </div>
     </div>
 
     <div class="details-card">
