@@ -136,7 +136,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
             </div>
         </div>
         <div class="header-bottom">
-            <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maasantohsi-banner-small.png'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
+            <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maasantohsi-small.png'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
         </div>
 
     </div>
