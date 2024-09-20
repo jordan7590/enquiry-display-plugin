@@ -130,29 +130,30 @@ function ced_generate_styled_html($data, $enquiry_id) {
             <img src="<?php echo esc_url('https://img.veenaworld.com/group-tours/world/europe/euep/euep-bnn-1.jpg'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
         </div>
     </div>
-    <div class="enquiry-card">
-        <div class="enquiry-header">
-            <div class="enquiry-id">
-                Enquiry ID<br>
-                <strong>EN140111</strong>
+    <div class="maasantoshi-enquiry">
+        <div class="maasantoshi-enquiry-card">
+            <div class="maasantoshi-enquiry-header">
+                <div class="maasantoshi-enquiry-id">
+                    Enquiry ID<br>
+                    <strong>EN140111</strong>
+                </div>
+                <div class="maasantoshi-date-details">
+                    <div>Pickup Date: 28-Sep-2024 10:00 AM</div>
+                    <div>Return Date: 01-Oct-2024 18:00 PM</div>
+                </div>
+                <div class="maasantoshi-enquiry-stamp">
+                    Enquiry
+                </div>
             </div>
-            <div class="date-details">
-                <div>Pickup Date: 28-Sep-2024 10:00 AM</div>
-                <div>Return Date: 01-Oct-2024 18:00 PM</div>
+            <div class="maasantoshi-enquiry-content">
+                <h1 class="maasantoshi-welcome-heading">Welcome, <span class="maasantoshi-customer-name">Mr. Prabhat Saxena</span></h1>
+                <p class="maasantoshi-paragraph"><span class="maasantoshi-orange-text">Warm Greetings from Maa Santoshi Tours And Travels!</span></p>
+                <p class="maasantoshi-paragraph">Thank you for your query at Maa Santoshi Tours and Travels. We're delighted to provide you with a personalized quotation tailored to your travel needs.</p>
+                <p class="maasantoshi-paragraph">Please note that this query response does not constitute a confirmed reservation for the Cab or Coach. To secure your booking with instant confirmation, please click the button below to proceed with the payment.</p>
+                <a href="#" class="maasantoshi-btn">Confirm Booking</a>
             </div>
-            <div class="enquiry-stamp">
-                Enquiry
-            </div>
-        </div>
-        <div class="enquiry-content">
-            <h1>Welcome, <span class="customer-name">Mr. Prabhat Saxena</span></h1>
-            <p><span class="orange-text">Warm Greetings from Patra Tours And Travels!</span></p>
-            <p>Thank you for your query at Patra Tours and Travels. We're delighted to provide you with a personalized quotation tailored to your travel needs.</p>
-            <p>Please note that this query response does not constitute a confirmed reservation for the Cab or Coach. To secure your booking with instant confirmation, please click the button below to proceed with the payment.</p>
-            <a href="#" class="btn">Confirm Booking</a>
         </div>
     </div>
-    
     <div class="two-column-section">
         <div class="column">
             <div class="details-card">

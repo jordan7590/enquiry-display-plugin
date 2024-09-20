@@ -224,7 +224,14 @@ li {
     background-color: #45a049;
 }
 
-.enquiry-card {
+.maasantoshi-enquiry {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+    padding: 40px;
+}
+.maasantoshi-enquiry-card {
     background-color: #ffffff;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -232,7 +239,7 @@ li {
     max-width: 800px;
     margin: 0 auto;
 }
-.enquiry-header {
+.maasantoshi-enquiry-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -240,16 +247,16 @@ li {
     background-color: #f8f8f8;
     border-bottom: 1px solid #e0e0e0;
 }
-.enquiry-id {
+.maasantoshi-enquiry-id {
     font-weight: 600;
     color: #555;
 }
-.date-details {
+.maasantoshi-date-details {
     text-align: center;
     font-size: 0.9em;
     color: #666;
 }
-.enquiry-stamp {
+.maasantoshi-enquiry-stamp {
     color: #ff6600;
     border: 2px solid #ff6600;
     border-radius: 50%;
@@ -258,13 +265,33 @@ li {
     text-transform: uppercase;
     font-size: 0.8em;
 }
-.enquiry-content {
+.maasantoshi-enquiry-content {
     padding: 30px;
 }
-.customer-name {
+.maasantoshi-customer-name {
     font-weight: 600;
     color: #ff6600;
 }
-.orange-text {
+.maasantoshi-orange-text {
     color: #ff6600;
+}
+.maasantoshi-welcome-heading {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+.maasantoshi-paragraph {
+    margin-bottom: 15px;
+}
+.maasantoshi-btn {
+    display: inline-block;
+    background-color: #ff6600;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+.maasantoshi-btn:hover {
+    background-color: #e55c00;
 }
