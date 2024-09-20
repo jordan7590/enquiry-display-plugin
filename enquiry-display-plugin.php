@@ -149,8 +149,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
         MST<?php echo esc_html($enquiry_id); ?>
         </div>
     <div class="date-details">
-        <div><b>Pickup Date :</b><span style="color:#4caf50"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></span> </div>
-        <div><b>Return Date :</b><span style="color:#4caf50"><?php echo esc_html($data['journey_details']['departure_details']['departure_date']); ?></span></div>
+        <div><b>Pickup Date : <span style="color:#4caf50"><?php echo esc_html($data['journey_details']['arrival_details']['arrival_date']); ?></span></b> </div>
+        <div><b>Return Date : <span style="color:#4caf50"><?php echo esc_html($data['journey_details']['departure_details']['departure_date']); ?></span></b></div>
     </div>
     <div class="enquiry-stamp">
         ENQUIRY
