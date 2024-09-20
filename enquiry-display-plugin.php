@@ -164,7 +164,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
             <p class="welcome-message">
                 Hi <span class="customer-name"> <b>Mr. <?php echo esc_html($data['guest_details']['name']); ?></span></b>,
             </p>
-            <p class="welcome-message">
+            <p class="welcome-message" style="color:#4caf50">
                 Warm Greetings from Maa Santoshi Tours And Travels!
             </p>
             <p class="welcome-message">
