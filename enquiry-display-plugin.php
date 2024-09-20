@@ -240,7 +240,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
                 ?>
                 <?php foreach ($activities as $activity): ?>
                         <div class="itinerary-item">
-                            <div class="itinerary-time"><?php echo substr(trim($activity), 0, 5); ?></div>
+                            <div class="itinerary-time"><?php echo esc_html($day['date&day']); ?></div>
                             <div class="itinerary-description"><?php echo esc_html($day['description']); ?></div>
                         </div>
                 <?php endforeach; ?>
