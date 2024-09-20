@@ -124,6 +124,16 @@ function ced_generate_styled_html($data, $enquiry_id) {
     text-transform: uppercase;"> Maa Santoshi Tours & Travels </p>
                 <p style="    font-size: 10px;"> Recognized By Ministry Of Tourism, Govt. of India & Department of Tourism, Govt. of Odisha </p>
             </div>
+            v class="contact-info">
+                 <p style="   font-size: 25px;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: #ffffff;
+    background: #0196fc;
+    padding: 5px;"> Enquiry Quotation
+
+</p>
+            </div>
         </div>
         <div class="header-bottom">
             <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2024/09/maasanothsi.png'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
