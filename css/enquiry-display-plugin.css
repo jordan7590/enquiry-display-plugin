@@ -289,7 +289,7 @@ span.customer-name {
 
 .arrival {
   background-color: #f9f9f9;
-
+  border-radius: 10px;
   h3 {
     background-color: #4caf50;
     color: white;
@@ -300,6 +300,7 @@ span.customer-name {
 }
 .departure {
   background-color: #f9f9f9;
+  border-radius: 10px;
   h3 {
     background-color: #4caf50;
     color: white;
