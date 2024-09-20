@@ -103,28 +103,35 @@ function ced_number_to_words($number) {
 
 
 // Generate styled HTML for enquiry data
-
-
 function ced_generate_styled_html($data, $enquiry_id) {
     ob_start();
     ?>
     <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
-        <?php wp_head(); ?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
-    </head>
-
-
-
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
+    <?php wp_head(); ?>
+</head>
 <body class="enquiry-body">
-<div id="enquiry-content">
+    <div class="header-container">
+        <div class="header-top">
+            <div class="contact-info">
+                <p>📞 +91 78558 84045</p>
+                <p>✉️ santoshim309@gmail.com</p>
+            </div>
+            <div class="logo-container">
+                <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2023/03/Maa-Santoshi-Tours-Travels-768x432.png'); ?>" alt="Maa Santoshi Travels" class="logo">
+                <p class="tagline">Travel. Explore. Celebrate Life</p>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <img src="<?php echo esc_url('https://img.veenaworld.com/group-tours/world/europe/euep/euep-bnn-1.jpg'); ?>" alt="Maa Santoshi Travels Header" class="header-image">
+        </div>
+    </div>
 
-<div class="details-card">
+    <div class="details-card">
         <div class="details-header">Enquiry Details</div>
         <div class="details-content">
             <div class="enquiry-details">
@@ -379,7 +386,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
         </div>
     </div>
 
-    <div class="details-card">
+       <div class="details-card">
     <div class="details-header">Cancellation Policy</div>
     <div class="details-content">
         <ul>
@@ -436,77 +443,6 @@ function ced_generate_styled_html($data, $enquiry_id) {
         <div class="footer">
             <p>Thank you for choosing our services. For any queries, please contact us.</p>
         </div>
-
-
-
-
-</div>
-   
-
-
-
-
-
-
-        
- <div class="pdf-download">
-            <button onclick="generatePDF()" class="button">Download PDF</button>
-        </div>
-
-        <script>
-        function generatePDF() {
-            console.log('Generate PDF function called');
-            
-            if (typeof window.jspdf === 'undefined') {
-                console.error('jsPDF library not loaded');
-                alert('PDF generation failed: Required library not loaded');
-                return;
-            }
-            
-            if (typeof html2canvas === 'undefined') {
-                console.error('html2canvas library not loaded');
-                alert('PDF generation failed: Required library not loaded');
-                return;
-            }
-
-            const { jsPDF } = window.jspdf;
-
-            html2canvas(document.getElementById('enquiry-content')).then(canvas => {
-                console.log('HTML to canvas conversion successful');
-                const imgData = canvas.toDataURL('image/png');
-                const pdf = new jsPDF('p', 'mm', 'a4');
-                const pdfWidth = pdf.internal.pageSize.getWidth();
-                const pdfHeight = pdf.internal.pageSize.getHeight();
-                const imgWidth = canvas.width;
-                const imgHeight = canvas.height;
-                const ratio = Math.min(pdfWidth / imgWidth, pdfHeight / imgHeight);
-                const imgX = (pdfWidth - imgWidth * ratio) / 2;
-                const imgY = 30;
-
-                pdf.addImage(imgData, 'PNG', imgX, imgY, imgWidth * ratio, imgHeight * ratio);
-                pdf.save('enquiry_<?php echo esc_js($enquiry_id); ?>.pdf');
-                console.log('PDF generated and save initiated');
-            }).catch(error => {
-                console.error('Error in html2canvas:', error);
-                alert('PDF generation failed: ' + error.message);
-            });
-        }
-
-        // Check if libraries are loaded
-        window.addEventListener('load', function() {
-            if (typeof window.jspdf === 'undefined') {
-                console.error('jsPDF library not loaded');
-            } else {
-                console.log('jsPDF library loaded successfully');
-            }
-            
-            if (typeof html2canvas === 'undefined') {
-                console.error('html2canvas library not loaded');
-            } else {
-                console.log('html2canvas library loaded successfully');
-            }
-        });
-        </script>
     </body>
     </html>
     <?php
