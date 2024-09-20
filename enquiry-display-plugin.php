@@ -125,10 +125,6 @@ function ced_generate_styled_html($data, $enquiry_id) {
                 <p>( Recognized By Ministry Of Tourism, Govt. of India & Department of Tourism, Govt. of Odisha )</p>
                 <p>Enquiry Quotation</p>
             </div>
-            <div class="logo-container">
-                <img src="<?php echo esc_url('https://maasantoshitravels.com/wp-content/uploads/2023/03/Maa-Santoshi-Tours-Travels-768x432.png'); ?>" alt="Maa Santoshi Travels" class="logo">
-                <p class="tagline">Travel. Explore. Celebrate Life</p>
-            </div>
         </div>
     </div>
 
