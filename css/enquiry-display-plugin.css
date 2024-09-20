@@ -314,6 +314,10 @@ span.customer-name {
   }
 }
 
-
+.includes-column,
+.excludes-column {
+    flex: 1;
+    padding: 0 15px;
+}
 
 /* comment  */

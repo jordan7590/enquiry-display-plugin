@@ -335,8 +335,9 @@ function ced_generate_styled_html($data, $enquiry_id) {
     </div>
 
     <div class="details-card">
-        <div class="details-header">Inclusion and Exclusion</div>
-        <div class="details-content">
+    <div class="details-header">INCLUSION AND EXCLUSION</div>
+    <div class="details-content">
+        <div class="includes-column">
             <h3>What your package includes</h3>
             <ul>
                 <li>All Transport related charges (Fuel, Toll Charges, State Taxes & Parking Charges)</li>
@@ -345,6 +346,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
                 <li>All Transfer & Sightseeing as per itinerary</li>
                 <li>GST (5%) added to Total Billing</li>
             </ul>
+        </div>
+        <div class="excludes-column">
             <h3>What Your Package Doesn't Includes</h3>
             <ul>
                 <li>Hotel Booking</li>
@@ -360,6 +363,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
             </ul>
         </div>
     </div>
+</div>
 
     <div class="details-card">
         <div class="details-header">Payment Options</div>
