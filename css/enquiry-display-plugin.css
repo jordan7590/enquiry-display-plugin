@@ -287,11 +287,16 @@ span.customer-name {
 }
 
 
-.arrival .departure {
+.arrival {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+
+}
+.departure {
     background-color: #f9f9f9;
     padding: 15px;
     border-radius: 5px;
 }
-
 /* comment  */
 
