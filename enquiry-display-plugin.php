@@ -132,7 +132,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
     font-weight: 900;
     text-transform: uppercase;
     color: #ffffff;
-    background: #0196fc;" id="download-pdf" onclick="generatePDF()> Enquiry Quotation
+    background: #0196fc;"> Enquiry Quotation
 
 </p>
             </div>
