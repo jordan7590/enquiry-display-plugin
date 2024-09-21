@@ -494,5 +494,4 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
 
 
-// comment 
 
