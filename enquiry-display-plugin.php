@@ -135,6 +135,9 @@ function ced_generate_styled_html($data, $enquiry_id) {
     background: #0196fc;"> Enquiry Quotation
 
 </p>
+
+<button id="download-pdf" onclick="generatePDF()">Download PDF</button>
+
             </div>
         </div>
         <div class="header-bottom">
@@ -490,7 +493,6 @@ function ced_generate_styled_html($data, $enquiry_id) {
     </body>
     </html>
 
-    <button id="download-pdf" onclick="generatePDF()">Download PDF</button>
 
     <!-- JavaScript to generate PDF -->
 <script>
