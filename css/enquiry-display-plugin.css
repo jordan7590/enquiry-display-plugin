@@ -395,405 +395,179 @@ svg {
 }
 
 
+/* Import Roboto font */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+
+/* General styles for print */
 @media print {
-    * {
-      print-color-adjust: exact;
-    }
-  
- 
-/* General styles */
-.enquiry-body {
+  body {
     font-family: "Roboto", Arial, sans-serif;
     line-height: 1.6;
-    color: #333;
-    max-width: 1000px;
-    margin: auto;
-    padding: 20px;
-    background-color: #f0f0f0;
+    color: #000;
+    background-color: white; /* Ensure white background for print */
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
   }
+  
+  /* Hide unnecessary sections that aren't needed in print */
+  .header-bottom img,
+  .footer,
+  .contact-info,
+  .highlight,
+  .button {
+    display: none; /* Hide elements like images, buttons, footers */
+  }
+
+  .enquiry-body {
+    background-color: white; /* Ensure white background */
+    margin: 0;
+    padding: 20px;
+    max-width: 100%;
+  }
+
+  /* Ensure headers and text are clear and readable */
   .enquiry-body h1,
   .enquiry-body h2 {
-    font-weight: 700; /* Bold */
+    font-weight: 700;
+    color: #000;
   }
-  
+
   .enquiry-body p {
-    font-weight: 400; /* Regular */
+    font-weight: 400;
   }
-  
-  .enquiry-body .light-text {
-    font-weight: 300; /* Light */
-  }
-  
+
+  /* Remove unnecessary borders and adjust layout for print */
   .enquiry-details {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    /* border: 1px solid #ddd; */
-    padding: 15px;
+    border: none;
+    padding: 0;
   }
+
   .enquiry-id {
-    font-weight: bold;
-    font-size: 18px;
+    font-size: 16px;
   }
+
   .date-details {
-    text-align: center;
+    text-align: left;
   }
+
   .enquiry-stamp {
-    width: 80px;
-    height: 80px;
-    background-color: #f0f0f0;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    color: #ff6b6b;
-    transform: rotate(-20deg);
-    border: 2px solid #ff6b6b;
+    display: none; /* Hide graphical elements not needed for print */
   }
-  
-  /* Header styles */
-  .header-container {
-    display: flex;
-    flex-direction: column;
-    background: linear-gradient(to left, #fff 50%, #ffd829 50%);
-    padding: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .contact-info {
-    color: #000000;
-    display: flex;
-    font-size: 18px;
-    font-weight: 900;
-    flex-direction: column;
-    align-content: flex-start;
-    justify-content: space-between;
-    align-items: flex-start;
-  }
-  
-  .logo {
-    max-width: 150px;
-    height: auto;
-  }
-  
-  .tagline {
-    font-size: 12px;
-    color: #333;
-    text-align: right;
-  }
-  
-  .header-bottom img {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
-  }
-  
-  /* Details card styles */
-  .details-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    margin-bottom: 30px;
-  }
-  
-  .details-header {
-    background-color: #0196fc;
-    text-transform: uppercase;
-    color: white;
-    padding: 15px;
-    font-weight: bold;
-    font-size: 18px;
-  }
-  
-  .details-content {
-    padding: 20px;
-  }
-  
-  /* Two-column layout */
-  .two-column-section {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 30px;
-  }
-  
-  .column {
-    width: 48%;
-  }
-  
-  /* Detail items */
-  .detail-item {
-    display: flex;
-    /* margin: 5px; */
-    padding: 10px;
-    align-items: flex-start;
-    border-bottom: solid 1px #80808038;
-  }
-  
-  .detail-item:last-child {
-    border-bottom: none;
-  }
-  .detail-label {
-    font-weight: bold;
-    width: 50%;
-    padding-right: 10px;
-    color: #555;
-  }
-  
-  .detail-value {
-    width: 50%;
-  }
-  
-  /* Itinerary styles */
-  .itinerary-container {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-  }
-  
-  .itinerary-day {
-    margin-bottom: 20px;
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-  }
-  
-  .day-header {
-    background-color: #4caf50;
-    color: white;
-    padding: 10px 10px 0px 0px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-  }
-  
-  .itinerary-item {
-    margin-bottom: 10px;
-    padding: 15px;
-  }
-  
-  .itinerary-time {
-    font-weight: bold;
-    color: #333;
-  }
-  
-  /* Table styles */
+
+  /* Adjust table styles for print */
   table {
     width: 100%;
     border-collapse: collapse;
     margin-bottom: 20px;
   }
-  
+
   th,
   td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    border: 1px solid #000; /* Darker border for better print contrast */
+    padding: 10px;
     text-align: left;
   }
-  
+
   th {
-    background-color: #f2f2f2;
-    font-weight: bold;
+    background-color: #ddd;
+    color: #000;
   }
-  
-  /* Highlight box */
-  .highlight {
-    background-color: #ffffcc;
-    padding: 15px;
-    border: 1px solid #e6e600;
-    border-radius: 5px;
+
+  /* Itinerary styles */
+  .itinerary-container {
+    background-color: white;
+  }
+
+  .itinerary-day {
+    background-color: white;
     margin-bottom: 20px;
+    padding: 0;
   }
-  
-  /* Bank details */
+
+  .day-header {
+    background-color: #333; /* Darker color for print */
+    color: white;
+  }
+
+  .two-column-section,
   .bank-details {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
+    display: block;
   }
-  
+
+  .column,
   .bank-card {
-    border: 1px solid #ddd;
-    padding: 15px;
-    width: calc(50% - 10px);
-    box-sizing: border-box;
-    background-color: #f9f9f9;
-    border-radius: 5px;
+    width: 100%;
   }
-  
+
+  /* Remove flex gaps for better printing */
+  .bank-details,
+  .two-column-section {
+    gap: 0;
+  }
+
   /* List styles */
   ul {
     padding-left: 20px;
   }
-  
+
   li {
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduce space for more compact printing */
   }
-  
-  /* Footer */
-  .footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #ddd;
-    color: #666;
+
+  /* Remove shadows and other effects */
+  .details-card {
+    box-shadow: none;
+    border: 1px solid #000;
+    background-color: white;
   }
-  
-  /* Responsive design */
-  @media (max-width: 768px) {
-    .two-column-section {
-      flex-direction: column;
-    }
-  
-    .column {
-      width: 100%;
-    }
-  
-    .bank-card {
-      width: 100%;
-    }
-  
-    .detail-item {
-      flex-direction: column;
-    }
-  
-    .detail-label,
-    .detail-value {
-      width: 100%;
-    }
-  }
-  
-  /* Button style */
-  .button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
-  }
-  
-  .button:hover {
-    background-color: #45a049;
-  }
-  
-  span.customer-name {
-    text-transform: capitalize;
-  }
-  
-  .arrival {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    h3 {
-      background-color: #4caf50;
-      color: white;
-      padding: 15px;
-      font-weight: bold;
-      font-size: 18px;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
-  }
-  .departure {
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    h3 {
-      background-color: #4caf50;
-      color: white;
-      padding: 15px;
-      font-weight: bold;
-      font-size: 18px;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
-  }
-  
-  .includes-column,
-  .excludes-column {
-    flex: 1;
-    padding: 0 15px;
-    border-radius: 10px;
-  }
-  
+
+  /* Adjust includes/excludes columns for print */
   .includes-column-header,
   .excludes-column-header {
-    background-color: #4caf50;
+    background-color: #333;
     color: white;
-    padding: 10px;
-    border-radius: 10px 10px 0px 0px;
-    margin-bottom: 10px;
   }
-  .includes-column-content,
-  .excludes-column-content {
-    padding: 0px 30px;
-  }
-  
-  
-  svg {
-      stroke-width: 1;
-      margin:0px 10px;
-  }
-  
-  
-  .footer {
-      background-color: #f8f8f8;
-      border-top: 3px solid #FFD829;
-      border-bottom: 3px solid #FFD829;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-  }
-  .footer-left {
-      font-size: 12px;
-      color: #333;
-      line-height: 1.4;
-      text-align: left;
-  }
-  .footer-center {
-      display: flex;
-      gap: 20px;
-  }
-  .footer-icon {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 11px;
-      color: #333;
-      text-align: center;
-  }
+
+  /* Simplify SVG icons and remove unnecessary graphical elements */
+  svg,
   .icon {
-      width: 50px;
-      height: 50px;
-      background-color: #ffffff;
-      border: 2px solid #003366;
-      border-radius: 50%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-bottom: 5px;
+    display: none;
   }
+
+  .footer-left,
   .footer-right {
-      font-size: 12px;
-      color: #333;
-      text-align: right;
-      line-height: 1.4;
+    display: none;
+  }
+
+  /* Pagination for long content */
+  .enquiry-body {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3 {
+    page-break-after: avoid;
+  }
+
+  .details-card, .itinerary-container {
+    page-break-inside: avoid;
+  }
+
+  /* Avoid page breaks within table rows */
+  tr, td {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure consistent font sizing for print */
+  h1 {
+    font-size: 24px;
   }
   
-  
-    /* More styles as needed */
+  h2 {
+    font-size: 20px;
   }
+
+  p {
+    font-size: 14px;
+  }
+}
