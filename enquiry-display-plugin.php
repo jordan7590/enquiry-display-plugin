@@ -492,16 +492,18 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
     <button id="download-pdf" onclick="generatePDF()">Download PDF</button>
 
-<script>
+    <script>
     function generatePDF() {
-        var element = document.getElementById('enquiry-content');
+        var element = document.getElementById('enquiry-content'); // HTML element to be converted to PDF
         var opt = {
-            margin:       1,
-            filename:     'Enquiry.pdf',
-            image:        { type: 'jpeg', quality: 0.98 },
-            html2canvas:  { scale: 2 },
-            jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            margin:       0, // No margin for full screen
+            filename:     'Enquiry_<?php echo esc_html($enquiry_id); ?>.pdf',
+            image:        { type: 'jpeg', quality: 1 }, // Full quality
+            html2canvas:  { scale: 3 }, // Higher scale for better quality
+            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' } // Use A4 size
         };
+
+        // Generate PDF using html2pdf.js
         html2pdf().from(element).set(opt).save();
     }
 </script>
