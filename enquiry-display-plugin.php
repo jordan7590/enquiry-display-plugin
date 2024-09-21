@@ -501,7 +501,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
             filename:     'Enquiry_<?php echo esc_html($enquiry_id); ?>.pdf',
             image:        { type: 'jpeg', quality: 1 }, // Full quality
             html2canvas:  { scale: 2, scrollY: -window.scrollY }, // Higher scale and scroll position adjustment
-            jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait', putOnlyUsedFonts: true, floatPrecision: 16 }
+            jsPDF:        { unit: 'mm', format: 'a3', orientation: 'portrait', putOnlyUsedFonts: true, floatPrecision: 16 }
         };
 
         // Generate PDF using html2pdf.js
