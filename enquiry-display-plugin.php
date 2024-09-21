@@ -113,8 +113,10 @@ function ced_generate_styled_html($data, $enquiry_id) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
     <?php wp_head(); ?>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
 </head>
-<body class="enquiry-body">
+<body class="enquiry-body" id="enquiry-content">
     <div class="header-container">
             
             <div class="header-top">
@@ -488,28 +490,21 @@ function ced_generate_styled_html($data, $enquiry_id) {
     </body>
     </html>
 
-      <!-- Button to trigger PDF download -->
-      <button id="download-pdf" onclick="generatePDF()">Download PDF</button>
+    <button id="download-pdf" onclick="generatePDF()">Download PDF</button>
 
-<!-- Include html2pdf.js CDN -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-
-<!-- JavaScript to generate PDF -->
 <script>
     function generatePDF() {
-        var element = document.getElementById('enquiry-content'); // HTML element to be converted to PDF
+        var element = document.getElementById('enquiry-content');
         var opt = {
             margin:       1,
-            filename:     'Enquiry_<?php echo esc_html($enquiry_id); ?>.pdf',
+            filename:     'Enquiry.pdf',
             image:        { type: 'jpeg', quality: 0.98 },
             html2canvas:  { scale: 2 },
             jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
         };
-
-        // Generate PDF using html2pdf.js
         html2pdf().from(element).set(opt).save();
     }
-</script>
+</script>a
     <?php
     return ob_get_clean();
 }
