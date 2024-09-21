@@ -504,7 +504,8 @@ function ced_generate_styled_html($data, $enquiry_id) {
         };
         html2pdf().from(element).set(opt).save();
     }
-</script>a
+</script>
+
     <?php
     return ob_get_clean();
 }
