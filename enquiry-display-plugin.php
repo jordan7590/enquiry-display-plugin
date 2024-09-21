@@ -114,6 +114,7 @@ function ced_generate_styled_html($data, $enquiry_id) {
     <title>Enquiry #<?php echo esc_html($enquiry_id); ?></title> 
     <?php wp_head(); ?>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
 </head>
 <body class="enquiry-body" id="enquiry-content">
@@ -136,8 +137,9 @@ function ced_generate_styled_html($data, $enquiry_id) {
 
 </p>
 
-<button id="download-pdf" onclick="generatePDF()">Download PDF</button>
-
+<button id="download-pdf" onclick="generatePDF()" style="background: none; border: none; cursor: pointer;">
+    <i class="fas fa-download"></i> 
+</button>
             </div>
         </div>
         <div class="header-bottom">
